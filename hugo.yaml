@@ -70,19 +70,6 @@ params:
     text: Home
     icon: /apple-touch-icon.png
     iconHeight: 35
-  profileMode:
-    enabled: false
-    title: ExampleSite
-    subtitle: This is subtitle
-    imageUrl: <img location>
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
   homeInfoParams:
     Title: Here is Ch1ldKing
     Content: Welcome to my blog!
