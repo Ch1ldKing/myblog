@@ -1,5 +1,5 @@
 ---
-title: Maple-Theme 配合 Maple-font
+title: Ubuntu 安装 K8s 所有的坑
 date: 2025-10-15T04:10:14+08:00
 lastmod: 2025-10-15T04:10:14+08:00
 tags:
