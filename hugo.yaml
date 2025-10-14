@@ -95,6 +95,10 @@ languages:
         # - name: email
         #   url: 'mailto:childking0909@gmail.com'
       comments: true
+      label:
+        text: Home
+        icon: static/apple-touch-icon.png
+        iconHeight: 35
     fuseOpts:
       isCaseSensitive: false
       shouldSort: true
