@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/zh/posts/2025-10-15_01-31-50.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "default"
+              "title": "2025-10-15_01-31-50"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/zh/posts/2025-10-15_01-31-50.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for default"
+              "title": "Backlinks for 2025-10-15_01-31-50"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/zh/posts/2025-10-15_01-31-50.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from default"
+              "title": "Outgoing links from 2025-10-15_01-31-50"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "archetypes/default.md",
+                "file": "content/zh/posts/2025-10-15_01-31-50.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of default"
+              "title": "Outline of 2025-10-15_01-31-50"
             }
           }
         ]
@@ -172,8 +172,15 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
-    "archetypes/Page.md",
     "archetypes/default.md",
+    "public/favicon-32x32.png",
+    "public/favicon-16x16.png",
+    "public/apple-touch-icon.png",
+    "static/favicon.ico",
+    "static/favicon-32x32.png",
+    "static/favicon-16x16.png",
+    "static/apple-touch-icon.png",
+    "archetypes/Page.md",
     "public/zh/posts/2025-10-15_01-50-23/index.html",
     "public/zh/posts/2025-10-15_01-50-23",
     "content/zh/posts/2025-10-15_01-50-23.md",
@@ -187,16 +194,9 @@
     "public/favicon_io/favicon-16x16.png",
     "public/favicon_io/apple-touch-icon.png",
     "public/favicon_io/android-chrome-512x512.png",
-    "public/favicon_io/android-chrome-192x192.png",
     "public/favicon_io",
     "static/favicon_io/site.webmanifest",
     "static/favicon_io/favicon.ico",
-    "static/favicon_io/favicon-32x32.png",
-    "static/favicon_io/favicon-16x16.png",
-    "static/favicon_io/android-chrome-512x512.png",
-    "static/favicon_io/apple-touch-icon.png",
-    "static/favicon_io/android-chrome-192x192.png",
-    "static/favicon_io",
     "content/zh/posts/first.md"
   ]
 }
