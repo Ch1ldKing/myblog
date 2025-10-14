@@ -4,7 +4,7 @@
       "id": "4cdf5188-febc-4189-aff8-6d85f350ac9f",
       "name": "新建中文博客",
       "type": "Macro",
-      "command": false,
+      "command": true,
       "runOnStartup": false,
       "macro": {
         "name": "新建中文博客",
