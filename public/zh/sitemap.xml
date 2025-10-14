@@ -43,6 +43,15 @@
     <loc>http://localhost:1313/zh/tags/vue/</loc>
     <lastmod>2025-10-15T02:20:15+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/zh/tags/maple/</loc>
+    <lastmod>2025-05-09T03:34:35+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</loc>
+    <lastmod>2025-05-09T03:34:35+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/zh/tags/vscode/</loc>
+    <lastmod>2025-05-09T03:34:35+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/zh/tags/go/</loc>
     <lastmod>2024-09-15T11:30:03+00:00</lastmod>
   </url><url>
@@ -86,12 +95,6 @@
                 hreflang="zh"
                 href="http://localhost:1313/zh/categories/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/zh/tags/maple/</loc>
-  </url><url>
-    <loc>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</loc>
-  </url><url>
-    <loc>http://localhost:1313/zh/tags/vscode/</loc>
   </url><url>
     <loc>http://localhost:1313/zh/search/</loc>
     <xhtml:link
