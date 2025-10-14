@@ -150,13 +150,23 @@
               "icon": "lucide-list",
               "title": "Outline of Ubuntu 安装 K8s 所有的坑"
             }
+          },
+          {
+            "id": "dee285930c6dc515",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
