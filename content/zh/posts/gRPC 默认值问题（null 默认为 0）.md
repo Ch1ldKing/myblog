@@ -1,19 +1,19 @@
 ---
-date: 'gRPC 默认值问题（null 默认为 0）'
-title: '2025 10 15_02 07 18'
-tags: ["problem","grpc"]
-author: "Dorianyang"
-author: ["Me"] 
+title: gRPC 必须有默认值导致问题（null 默认为 0）
+date: 2024-09-15T11:30:03+00:00
+tags:
+  - problem
+  - grpc
+  - go
+author: Dorianyang
 showToc: true
 TocOpen: false
-draft: false
 hidemeta: false
 comments: true
-disableHLJS: false # to disable highlightjs
-disableShare: false
 disableHLJS: false
+disableShare: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
