@@ -5,7 +5,7 @@ date: 2024-09-15T11:30:03+00:00
 # aliases: ["/first"]
 tags: ["problem"]
 author: "Dorianyang"
-# author: ["Me", "You"] # multiple authors
+author: ["Me"] 
 showToc: true
 TocOpen: false
 draft: false
