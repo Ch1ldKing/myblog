@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "ee15ea2b455a2d88",
@@ -172,9 +173,9 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "layouts/_internal/google_analytics_async.html",
     "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
-    "layouts/_internal/google_analytics_async.html",
     "layouts/_internal",
     "public/zh/tags/maple/index.xml",
     "public/zh/tags/maple/page/1/index.html",
