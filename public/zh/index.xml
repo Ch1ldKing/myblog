@@ -6,8 +6,15 @@
     <description>Recent content on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 15 Oct 2025 02:20:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Oct 2025 04:10:14 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maple-Theme 配合 Maple-font</title>
+      <link>http://localhost:1313/zh/posts/2025-10-15_04-10-14/</link>
+      <pubDate>Wed, 15 Oct 2025 04:10:14 +0800</pubDate>
+      <guid>http://localhost:1313/zh/posts/2025-10-15_04-10-14/</guid>
+      <description>&lt;p&gt;在 VSCode 安装了 Maple 主题之后，我们可能会遇到一些字体不生效，或者[TODO]标签没法主阿们渲染的情况，就需要修改系统中 &lt;code&gt;.vscode/extensions/subframe7536.theme-maple-0.7.16/themes/maple-dark-color-theme.json&lt;/code&gt;，改为以下内容（同样适用于 kiro,cursor 等）&lt;/p&gt;</description>
+    </item>
     <item>
       <title>SVG 颜色问题</title>
       <link>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>

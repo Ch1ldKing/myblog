@@ -172,6 +172,8 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "public/zh/posts/2025-10-15_04-10-14/index.html",
+    "public/zh/posts/2025-10-15_04-10-14",
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
     "content/zh/posts/2025-10-15_04-10-14.md",
     "layouts/_default/baseof.html",
@@ -184,7 +186,6 @@
     "public/zh/tags/maple/page/1",
     "public/zh/tags/maple/page",
     "public/zh/tags/maple/index.html",
-    "public/zh/tags/maple",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
     "content/zh/about.md",
     "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
