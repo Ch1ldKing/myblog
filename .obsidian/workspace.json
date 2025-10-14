@@ -172,6 +172,8 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "layouts/_internal/google_analytics_async.html",
+    "layouts/_internal",
     "public/zh/tags/maple/index.xml",
     "public/zh/tags/maple/page/1/index.html",
     "public/zh/tags/maple/page/1",
@@ -181,8 +183,6 @@
     "public/zh/tags/vscode/index.xml",
     "public/zh/tags/vscode/page/1/index.html",
     "public/zh/tags/vscode/page/1",
-    "public/zh/tags/vscode/page",
-    "public/zh/tags/vscode/index.html",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
     "content/zh/about.md",
