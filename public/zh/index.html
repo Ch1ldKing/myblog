@@ -190,11 +190,16 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>在 VSCode 安装了 Maple 主题之后，我们可能会遇到一些字体不生效，或者[TODO]标签没法主阿们渲染的情况，就需要修改系统中 .vscode/extensions/subframe7536.theme-maple-0.7.16/themes/maple-dark-color-theme.json，改为以下内容（同样适用于 kiro,cursor 等）
-</p>
+    <p>在ubuntu 安装时，手动配置 ipv4，name servers 和 searchdomains 是什么 Name Servers（DNS 服务器） 用于解析域名。例如： •	8.8.8.8, 8.8.4.4（Google DNS） •	或者你网络提供商的 DNS，如 114.114.114.114 填写多个时用 逗号分隔。
+Search Domains（搜索域） 这个选项是为了方便局域网域名解析。举个例子： •	如果你填写了 example.com，当你在终端中访问 server1，系统会自动尝试解析为 server1.example.com。 •	多个域名可以用空格分隔：example.com local.lan 这主要用于企业或学校内的内网环境，不填也可以。
+我使用虚拟机和 NAT 网络，如何配置代理？我的宿主机上使用 Clash 确认 Clash 开放了公网访问（监听 0.0.0.0）
+编辑 Clash 的配置文件 ~/.config/clash/config.yaml 或 clash.meta.yaml，确保监听地址改为：
+mixed-port: 7890 allow-lan: true # ✅ 允许局域网设备访问 Clash bind-address: 0.0.0.0 # ✅ 不要写 127.0.0.1 在虚拟机中设置代理 在 Ubuntu 虚拟机里，可以这样设置环境变量方式配置代理：
+export http_proxy=&#34;http://192.168.79.1:7890&#34; export https_proxy=&#34;http://192.168.79.1:7890&#34; export all_proxy=&#34;socks5://192.168.79.1:7891&#34; K8s 安装软件仓库地址 关于 https://github.com/kubernetes/kubernetes/issues/123673 ， Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库地址（通常是 apt.kubernetes.io）已弃用，并迁移到了新的地址 pkgs.k8s.io
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-15 04:10:14 +0800 CST'>2025年10月15日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>8 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
-  <a class="entry-link" aria-label="post link to Maple-Theme 配合 Maple-font" href="http://localhost:1313/zh/posts/2025-10-15_04-10-14/"></a>
+  <footer class="entry-footer"><span title='2025-10-15 04:10:14 +0800 CST'>2025年10月15日</span>&nbsp;·&nbsp;<span>6 分钟</span>&nbsp;·&nbsp;<span>1172 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
+  <a class="entry-link" aria-label="post link to Maple-Theme 配合 Maple-font" href="http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/"></a>
 </article>
 
 <article class="post-entry"> 
