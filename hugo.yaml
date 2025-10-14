@@ -72,6 +72,11 @@ languages:
           url: /zh/archives/
           weight: 40
     params:
+      assets:
+        favicon: static/favicon_io/favicon.ico
+        favicon16x16: static/favicon_io/favicon-16x16.png
+        favicon32x32: static/favicon_io/favicon-32x32.png
+        apple_touch_icon: static/favicon_io/apple-touch-icon.png
       homeInfoParams:
         enabled: true
         Title: Dorian 的妙妙文档
@@ -108,7 +113,6 @@ languages:
 # minify:
 #   disableXML: true
 #   minifyOutput: true
-# params:
 #   profileMode:
 #       enabled: true
 #       title: "<Title>" # optional default will be site title
