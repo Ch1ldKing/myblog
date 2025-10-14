@@ -25,13 +25,13 @@
             {{- $img = $img.Resize "50x50" }}
             {{- end }}
             {{- end }}
-            <a href="https://s2.loli.net/2025/10/14/z3PAUDMILET7GOV.jpg" ><img id="home-info-avatar" draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            <img id="home-info-avatar" draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
             height="{{ .imageHeight | default 50 }}" width="{{ .imageWidth | default 100 }}" style="border-radius: 50%!important;
-            background-color: #fff; padding: 2px;" /></a>
+            background-color: #fff; padding: 2px;" />
             {{- else }}
-            <a href="https://s2.loli.net/2025/10/14/z3PAUDMILET7GOV.jpg" ><img id="home-info-avatar" draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            <img id="home-info-avatar" draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
             height="{{ .imageHeight | default 50 }}" width="{{ .imageWidth | default 100 }}" style="border-radius: 50%!important;
-            background-color: #fff; padding: 2px;" /></a>
+            background-color: #fff; padding: 2px;" />
             {{- end }}
             {{- end }}
         </div>
