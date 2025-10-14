@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dataframe NaN 值遇到 json 的问题"
+              "title": "Maple-Theme 配合 Maple-font"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Dataframe NaN 值遇到 json 的问题"
+              "title": "Backlinks for Maple-Theme 配合 Maple-font"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Dataframe NaN 值遇到 json 的问题"
+              "title": "Outgoing links from Maple-Theme 配合 Maple-font"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Dataframe NaN 值遇到 json 的问题"
+              "title": "Outline of Maple-Theme 配合 Maple-font"
             }
           }
         ]
@@ -170,30 +170,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "55f1f25f047e18d1",
+  "active": "1cee3c437083186e",
   "lastOpenFiles": [
-    "public/zh/tags/pandas/page/1/index.html",
-    "public/zh/tags/pandas/page/1",
-    "public/zh/tags/pandas/page",
-    "public/zh/tags/pandas/index.xml",
-    "public/zh/tags/pandas/index.html",
-    "public/zh/tags/pandas",
-    "public/zh/tags/vue/page/1/index.html",
-    "public/zh/tags/vue/page/1",
-    "public/zh/tags/vue/page",
-    "public/zh/tags/vue/index.xml",
-    "public/zh/tags/vue/index.html",
-    "archetypes/default.md",
+    "public/zh/tags/maple/index.xml",
+    "public/zh/tags/maple/page/1/index.html",
+    "public/zh/tags/maple/page/1",
+    "public/zh/tags/maple/page",
+    "public/zh/tags/maple/index.html",
+    "public/zh/tags/maple",
+    "public/zh/tags/vscode/index.xml",
+    "public/zh/tags/vscode/page/1/index.html",
+    "public/zh/tags/vscode/page/1",
+    "public/zh/tags/vscode/page",
+    "public/zh/tags/vscode/index.html",
+    "content/zh/posts/Tailwind SVG 颜色问题.md",
+    "content/zh/posts/Maple-Theme 配合 Maple-font.md",
+    "content/zh/about.md",
     "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
     "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
-    "content/zh/posts/Tailwind SVG 颜色问题.md",
+    "archetypes/default.md",
     "content/zh/posts/first.md",
     "content/zh/posts/2025-10-15_02-18-20.md",
     "content/zh/posts/2025-10-15_02-17-23.md",
     "content/zh/posts/2025-10-15_02-16-14.md",
     "content/zh/posts/2025-10-15_02-10-30.md",
     "content/zh/posts/2025-10-15_02-10-21.md",
-    "content/zh/about.md",
     "public/favicon-32x32.png",
     "public/favicon-16x16.png",
     "public/apple-touch-icon.png",
