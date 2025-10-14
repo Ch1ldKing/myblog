@@ -116,13 +116,13 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/tags/" title="🕹️">
-                    <span>🕹️</span>
+                <a href="http://localhost:1313/zh/tags/" title="分类">
+                    <span>分类</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/archives/" title="归档">
-                    <span>归档</span>
+                <a href="http://localhost:1313/zh/archives/" title="时间线">
+                    <span>时间线</span>
                 </a>
             </li>
         </ul>
@@ -137,15 +137,15 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">2025 10 15_02 07 18
+    <h2 class="entry-hint-parent">gRPC 必须有默认值导致问题（null 默认为 0）
     </h2>
   </header>
   <div class="entry-content">
     <p>gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0. 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的 所以设定一个特殊值，来解析为 null，返回给前端
 </p>
   </div>
-  <footer class="entry-footer"><span>1 分钟</span>&nbsp;·&nbsp;<span>18 字</span>&nbsp;·&nbsp;<span>Me</span></footer>
-  <a class="entry-link" aria-label="post link to 2025 10 15_02 07 18" href="http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/"></a>
+  <footer class="entry-footer"><span title='2024-09-15 11:30:03 +0000 +0000'>2024年9月15日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>18 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
+  <a class="entry-link" aria-label="post link to gRPC 必须有默认值导致问题（null 默认为 0）" href="http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/"></a>
 </article>
     </main>
     

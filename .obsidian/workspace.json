@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/Tailwind SVG 颜色问题.md",
+                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tailwind SVG 颜色问题"
+              "title": "Dataframe NaN 值遇到 json 的问题"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/posts/Tailwind SVG 颜色问题.md",
+                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Tailwind SVG 颜色问题"
+              "title": "Backlinks for Dataframe NaN 值遇到 json 的问题"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/zh/posts/Tailwind SVG 颜色问题.md",
+                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Tailwind SVG 颜色问题"
+              "title": "Outgoing links from Dataframe NaN 值遇到 json 的问题"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/zh/posts/Tailwind SVG 颜色问题.md",
+                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tailwind SVG 颜色问题"
+              "title": "Outline of Dataframe NaN 值遇到 json 的问题"
             }
           }
         ]
@@ -170,12 +170,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1cee3c437083186e",
+  "active": "55f1f25f047e18d1",
   "lastOpenFiles": [
+    "public/zh/tags/pandas/page/1/index.html",
+    "public/zh/tags/pandas/page/1",
+    "public/zh/tags/pandas/page",
+    "public/zh/tags/pandas/index.xml",
+    "public/zh/tags/pandas/index.html",
+    "public/zh/tags/pandas",
+    "public/zh/tags/vue/page/1/index.html",
+    "public/zh/tags/vue/page/1",
+    "public/zh/tags/vue/page",
+    "public/zh/tags/vue/index.xml",
+    "public/zh/tags/vue/index.html",
+    "archetypes/default.md",
     "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
     "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
-    "archetypes/default.md",
     "content/zh/posts/first.md",
     "content/zh/posts/2025-10-15_02-18-20.md",
     "content/zh/posts/2025-10-15_02-17-23.md",
@@ -183,23 +194,13 @@
     "content/zh/posts/2025-10-15_02-10-30.md",
     "content/zh/posts/2025-10-15_02-10-21.md",
     "content/zh/about.md",
-    "public/zh/tags/grpc/page/1/index.html",
-    "public/zh/tags/grpc/page/1",
-    "public/zh/tags/grpc/page",
-    "public/zh/tags/grpc/index.xml",
-    "public/zh/tags/grpc/index.html",
-    "public/zh/tags/grpc",
-    "public/zh/posts/grpc-默认值问题null-默认为-0/index.html",
-    "public/zh/posts/grpc-默认值问题null-默认为-0",
     "public/favicon-32x32.png",
     "public/favicon-16x16.png",
     "public/apple-touch-icon.png",
-    "static/favicon.ico",
     "static/favicon-32x32.png",
     "static/favicon-16x16.png",
     "static/apple-touch-icon.png",
     "archetypes/Page.md",
-    "public/zh/posts/2025-10-15_01-50-23/index.html",
     "content/zh/posts/2025-10-15_01-50-23.md",
     "public/favicon_io/favicon-32x32.png",
     "public/favicon_io/favicon-16x16.png",

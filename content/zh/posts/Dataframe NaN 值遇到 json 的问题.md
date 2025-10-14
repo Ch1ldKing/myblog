@@ -1,17 +1,19 @@
 ---
-title: "Dataframe NaN 值遇到 json 的问题"
+title: Dataframe NaN 值遇到 json 的问题
 date: 2024-09-15T11:30:03+00:00
-tags: ["problem"]
-author: "Dorianyang"
-
+tags:
+  - problem
+  - pandas
+  - json
+author: Dorianyang
 showToc: true
 TocOpen: false
 hidemeta: false
 comments: true
-disableHLJS: false      # 语法高亮（false 表示启用）
+disableHLJS: false
 disableShare: false
 hideSummary: false
-searchHidden: false     # 若希望文章可被站内搜索，这里设为 false
+searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true

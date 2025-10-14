@@ -6,8 +6,31 @@
     <description>Recent content on Ch1ldKing</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 15 Sep 2024 11:30:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Oct 2025 02:20:15 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SVG 颜色问题</title>
+      <link>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 15 Oct 2025 02:20:15 +0800</pubDate>
+      <guid>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=&amp;ldquo;currentColor&amp;rdquo;，然后就可以在&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vue&#34; data-lang=&#34;vue&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;svg&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1749727002733&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;icon&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;viewBox&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0 0 1394 1024&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-id&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;5650&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;200&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;200&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;M808.665066 968.123525a139.174837 139.174837 0 0 1-222.989114 0L28.061551 224.448838A140.525626 140.525626 0 0 1 0 140.133462C0 62.746326 62.484883 0 139.567002 0h1115.228801c30.283817 0 59.739731 9.891261 83.944998 28.192273 61.569833 46.558646 73.901229 134.425289 27.538666 196.256565L808.665066 968.123525z&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;fill&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;currentColor&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-id&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;5651&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;svg&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后在 vue 中使用，可以跟随父组件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vue&#34; data-lang=&#34;vue&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;	&amp;#39;flex items-center px-2 py-1 rounded-full text-xs font-medium min-w-[70px] justify-center&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;	category.change &amp;gt; 0 ? &amp;#39;bg-red-100 text-red-800&amp;#39; : &amp;#39;bg-green-100 text-green-800&amp;#39;]&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;IconArrowDown&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[&amp;#39;w-3 h-3 mr-1&amp;#39;, category.change &amp;gt; 0 ? &amp;#39;rotate-180&amp;#39; : &amp;#39;&amp;#39;]&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	{{ Math.&lt;span style=&#34;color:#a6e22e&#34;&gt;abs&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;category&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;change&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;toFixed&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) }}&lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;还可以直接指定颜色&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dataframe NaN 值遇到 json 的问题</title>
       <link>http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</link>
@@ -51,9 +74,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
-      <title>2025 10 15_02 07 18</title>
+      <title>gRPC 必须有默认值导致问题（null 默认为 0）</title>
       <link>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Sep 2024 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</guid>
       <description>&lt;p&gt;gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0.
 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的

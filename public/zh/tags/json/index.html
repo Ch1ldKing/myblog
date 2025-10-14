@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Categories | Ch1ldKing</title>
+<title>Json | Ch1ldKing</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/zh/categories/">
+<link rel="canonical" href="http://localhost:1313/zh/tags/json/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.870ec7a738304234433d49dc79f1ec1321b5a5537afaca6d257283b72972b738.css" integrity="sha256-hw7HpzgwQjRDPUncefHsEyG1pVN6&#43;sptJXKDtylytzg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/static/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/static/favicon-16x16.png">
@@ -18,9 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/zh/categories/index.xml" title="rss">
-<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/categories/">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/en/categories/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/zh/tags/json/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/tags/json/">
 <noscript>
     <style>
         #theme-toggle,
@@ -129,13 +128,26 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
 <header class="page-header">
-    <h1>Categories</h1>
+  <h1>
+    Json
+  </h1>
 </header>
 
-<ul class="terms-tags">
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Dataframe NaN 值遇到 json 的问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>我的需求是把 df 的 NaN 转 None，方便后续 json 转 null 看下面这段代码
+# 计算 MA 指标 df[&#34;MA5&#34;] = df[&#34;Close&#34;].rolling(window=5).mean().round(2) df[&#34;MA10&#34;] = df[&#34;Close&#34;].rolling(window=10).mean().round(2) df[&#34;MA30&#34;] = df[&#34;Close&#34;].rolling(window=30).mean().round(2) df[&#34;MA60&#34;] = df[&#34;Close&#34;].rolling(window=60).mean().round(2) # 将非空数据保留，空数据用None替换 df = df.astype(object) df = df.where(df.notnull(), None) print(df[&#34;MA10&#34;].head(10)) kline_data = df[ [ &#34;time&#34;, &#34;Open&#34;, &#34;Close&#34;, &#34;High&#34;, &#34;Low&#34;, &#34;Volume&#34;, &#34;MA5&#34;, &#34;MA10&#34;, &#34;MA30&#34;, &#34;MA60&#34;, ] ].to_dict(orient=&#34;records&#34;) 死活不行，输出的 MA 值仍然有 NaN 最后通过新建一个 df 解决
+export_df = df.astype(object) export_df = export_df.where(export_df.notna(), None) # 调试：确认 NaN 已变成 None print(export_df[&#34;MA10&#34;].head(10)) </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-15 11:30:03 +0000 +0000'>2024年9月15日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>72 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
+  <a class="entry-link" aria-label="post link to Dataframe NaN 值遇到 json 的问题" href="http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/"></a>
+</article>
     </main>
     
 <footer class="footer">

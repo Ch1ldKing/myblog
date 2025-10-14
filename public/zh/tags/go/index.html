@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Categories | Ch1ldKing</title>
+<title>Go | Ch1ldKing</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/zh/categories/">
+<link rel="canonical" href="http://localhost:1313/zh/tags/go/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.870ec7a738304234433d49dc79f1ec1321b5a5537afaca6d257283b72972b738.css" integrity="sha256-hw7HpzgwQjRDPUncefHsEyG1pVN6&#43;sptJXKDtylytzg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/static/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/static/favicon-16x16.png">
@@ -18,9 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/zh/categories/index.xml" title="rss">
-<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/categories/">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/en/categories/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/zh/tags/go/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/tags/go/">
 <noscript>
     <style>
         #theme-toggle,
@@ -129,13 +128,25 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
 <header class="page-header">
-    <h1>Categories</h1>
+  <h1>
+    Go
+  </h1>
 </header>
 
-<ul class="terms-tags">
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">gRPC 必须有默认值导致问题（null 默认为 0）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0. 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的 所以设定一个特殊值，来解析为 null，返回给前端
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-15 11:30:03 +0000 +0000'>2024年9月15日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>18 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
+  <a class="entry-link" aria-label="post link to gRPC 必须有默认值导致问题（null 默认为 0）" href="http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/"></a>
+</article>
     </main>
     
 <footer class="footer">

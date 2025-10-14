@@ -64,14 +64,17 @@ languages:
           url: /zh/about/
           weight: 20
         - identifier: tags
-          name: 🕹️
+          name: 分类
           url: /zh/tags/
           weight: 30
         - identifier: archives
-          name: 归档
+          name: 时间线
           url: /zh/archives/
           weight: 40
     params:
+      ShowCodeCopyButtons: true
+      UseHugoToc: true
+      showtoc: false
       assets:
         favicon: static/favicon.ico
         favicon16x16: static/favicon-16x16.png
