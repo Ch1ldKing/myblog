@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "archetypes/default.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dataframe NaN 值遇到 json 的问题"
+              "title": "default"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "archetypes/default.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Dataframe NaN 值遇到 json 的问题"
+              "title": "Backlinks for default"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "archetypes/default.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Dataframe NaN 值遇到 json 的问题"
+              "title": "Outgoing links from default"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+                "file": "archetypes/default.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Dataframe NaN 值遇到 json 的问题"
+              "title": "Outline of default"
             }
           }
         ]
@@ -172,6 +172,15 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "archetypes/Page.md",
+    "archetypes/default.md",
+    "public/zh/posts/2025-10-15_01-50-23/index.html",
+    "public/zh/posts/2025-10-15_01-50-23",
+    "content/zh/posts/2025-10-15_01-50-23.md",
+    "content/zh/posts/2025-10-15_01-31-50.md",
+    "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
+    "public/zh/posts/2025-10-15_01-31-50/index.html",
+    "public/zh/posts/2025-10-15_01-31-50",
     "public/favicon_io/site.webmanifest",
     "public/favicon_io/favicon.ico",
     "public/favicon_io/favicon-32x32.png",
@@ -188,12 +197,6 @@
     "static/favicon_io/apple-touch-icon.png",
     "static/favicon_io/android-chrome-192x192.png",
     "static/favicon_io",
-    "public/favicon.ico",
-    "static/favicon.ico",
-    "content/zh/posts/first.md",
-    "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
-    "content/zh/posts/2025-10-15_01-31-50.md",
-    "obs_scripts/newblog.js",
-    "obs_scripts"
+    "content/zh/posts/first.md"
   ]
 }
