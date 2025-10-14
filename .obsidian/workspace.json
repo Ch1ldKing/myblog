@@ -173,6 +173,8 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "layouts/_default/baseof.html",
+    "layouts/_default",
     "layouts/_internal/google_analytics_async.html",
     "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
@@ -184,7 +186,6 @@
     "public/zh/tags/maple/index.html",
     "public/zh/tags/maple",
     "public/zh/tags/vscode/index.xml",
-    "public/zh/tags/vscode/page/1/index.html",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
     "content/zh/about.md",
     "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
