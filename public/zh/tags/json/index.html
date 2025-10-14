@@ -147,7 +147,7 @@
 # 计算 MA 指标 df[&#34;MA5&#34;] = df[&#34;Close&#34;].rolling(window=5).mean().round(2) df[&#34;MA10&#34;] = df[&#34;Close&#34;].rolling(window=10).mean().round(2) df[&#34;MA30&#34;] = df[&#34;Close&#34;].rolling(window=30).mean().round(2) df[&#34;MA60&#34;] = df[&#34;Close&#34;].rolling(window=60).mean().round(2) # 将非空数据保留，空数据用None替换 df = df.astype(object) df = df.where(df.notnull(), None) print(df[&#34;MA10&#34;].head(10)) kline_data = df[ [ &#34;time&#34;, &#34;Open&#34;, &#34;Close&#34;, &#34;High&#34;, &#34;Low&#34;, &#34;Volume&#34;, &#34;MA5&#34;, &#34;MA10&#34;, &#34;MA30&#34;, &#34;MA60&#34;, ] ].to_dict(orient=&#34;records&#34;) 死活不行，输出的 MA 值仍然有 NaN 最后通过新建一个 df 解决
 export_df = df.astype(object) export_df = export_df.where(export_df.notna(), None) # 调试：确认 NaN 已变成 None print(export_df[&#34;MA10&#34;].head(10)) </p>
   </div>
-  <footer class="entry-footer"><span title='2024-09-15 11:30:03 +0000 +0000'>2024年9月15日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>72 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
+  <footer class="entry-footer"><span title='2024-08-21 11:30:03 +0000 +0000'>2024年8月21日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>72 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
   <a class="entry-link" aria-label="post link to Dataframe NaN 值遇到 json 的问题" href="http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/"></a>
 </article>
     </main>

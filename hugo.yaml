@@ -2,7 +2,7 @@ baseURL: https://dorianyang.com
 title: Dorianyang 的妙妙文档
 theme: PaperMod
 enableRobotsTXT: true
-
+googleAnalytics: G-CR1332THT7
 defaultContentLanguage: zh
 defaultContentLanguageInSubdir: true
 languages:
