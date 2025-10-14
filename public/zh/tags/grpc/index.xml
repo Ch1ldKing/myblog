@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Grpc on Ch1ldKing</title>
+    <link>http://localhost:1313/zh/tags/grpc/</link>
+    <description>Recent content in Grpc on Ch1ldKing</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>zh</language>
+    <atom:link href="http://localhost:1313/zh/tags/grpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025 10 15_02 07 18</title>
+      <link>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</guid>
+      <description>&lt;p&gt;gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0.
+我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的
+所以设定一个特殊值，来解析为 null，返回给前端&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
