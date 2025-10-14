@@ -1,0 +1,25 @@
+.home-info .home-info-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap);
+}
+
+.home-info .profile_inner {
+    flex-shrink: 0;
+}
+
+.home-info .home-info-text {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .home-info .home-info-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-info .home-info-text {
+        width: 100%;
+    }
+}

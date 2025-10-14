@@ -1,118 +1,215 @@
 baseURL: https://childking.top
-languageCode: en-us
-title: dorian's blog
+title: Ch1ldKing
 theme: PaperMod
 enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-googleAnalytics: UA-123-45
-pygmentsUseClasses: true
-minify:
-  disableXML: true
-  minifyOutput: true
-params:
-  profileMode:
-      enabled: true
-      title: "<Title>" # optional default will be site title
-      subtitle: "Dorian 的妙妙文档"
-      imageUrl: "https://s2.loli.net/2025/10/14/z3PAUDMILET7GOV.jpg" # optional
-      imageTitle: "dorian" # optional
-      imageWidth: 120 # custom size
-      imageHeight: 120 # custom size
-      buttons:
-          - name: Archive
-            url: "/archive"
 
-  env: production
-  description: Dorian 的妙妙文档
-  keywords:
-    - Blog
-    - Portfolio
-    - PaperMod
-  author: Me
-  images:
-    - <link or path of image for opengraph, twitter-cards>
-  DateFormat: January 2, 2006
-  defaultTheme: auto
-  disableThemeToggle: false
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: false
-  tocopen: false
-  assets:
-    favicon: <link / abs url>
-    favicon16x16: <link / abs url>
-    favicon32x32: <link / abs url>
-    apple_touch_icon: <link / abs url>
-    safari_pinned_tab: <link / abs url>
-  label:
-    text: Home
-    icon: /apple-touch-icon.png
-    iconHeight: 35
-  homeInfoParams:
-    Title: Here is Ch1ldKing
-    Content: Welcome to my blog!
-  socialIcons:
-    - name: github
-      url: https://github.com/Ch1ldKing
-    - name: telegram
-      url: https://t.me/ch1ldk1ng
-    - name: stackoverflow
-      url: https://stackoverflow.com
-  analytics:
-    google:
-      SiteVerificationTag: XYZabc
-    bing:
-      SiteVerificationTag: XYZabc
-    yandex:
-      SiteVerificationTag: XYZabc
-  cover:
-    hidden: true
-    hiddenInList: true
-    hiddenInSingle: true
-  editPost:
-    URL: https://github.com/Ch1ldKing/myblog/content
-    Text: Suggest Changes
-    appendFilePath: true
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    keys:
-      - title
-      - permalink
-      - summary
-      - content
-menu:
-  main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: github
-      name: github
-      url: https://github.com/Ch1ldKing
-      weight: 30
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: true
+languages:
+  en:
+    languageName: English
+    languageCode: en
+    contentDir: content/en
+    params:
+      profileMode:
+        enabled: true
+        title: "<Title>" # optional default will be site title
+        subtitle: "Dorian is here"
+        imageUrl: "https://s2.loli.net/2025/10/14/z3PAUDMILET7GOV.jpg" # optional
+        imageTitle: "dorian" # optional
+        imageWidth: 120 # custom size
+        imageHeight: 120 # custom size
+        buttons:
+            - name: Archive
+              url: "/archive"
+      socialIcons:
+        - name: github
+          url: https://github.com/Ch1ldKing
+        - name: telegram
+          url: https://t.me/ch1ldk1ng
+        - name: whatsapp
+          url: https://chat.whatsapp.com/KiX1p3mYH8pG7bX1mYkZ8F
 
-markup:
-  highlight:
-    noClasses: false
+    menu:
+      main:
+        - identifier: search
+          name: Search
+          url: /en/search/
+          weight: 10
+        - identifier: About
+          name: About
+          url: /en/about/
+          weight: 20
+        - identifier: tags
+          name: 🕹️
+          url: /en/tags/
+          weight: 30
+        - identifier: archives
+          name: Archives
+          url: /en/archives/
+          weight: 40
+  zh:
+    weight: 2
+    languageName: 中文
+    languageCode: zh
+    contentDir: content/zh
+    menu:
+      main:
+        - identifier: search
+          name: 搜索
+          url: /zh/search/
+          weight: 10
+        - identifier: About
+          name: 关于
+          url: /zh/about/
+          weight: 20
+        - identifier: tags
+          name: 🕹️
+          url: /zh/tags/
+          weight: 30
+        - identifier: archives
+          name: 归档
+          url: /zh/archives/
+          weight: 40
+    params:
+      homeInfoParams:
+        enabled: true
+        Title: Dorian 的妙妙文档
+        Content: 我要吃麦麦
+        imageUrl: 'https://s2.loli.net/2025/10/14/z3PAUDMILET7GOV.jpg'
+        imageWidth: 110
+        imageHeight: 110
+      socialIcons:
+        - name: github
+          url: https://github.com/Ch1ldKing
+        - name: telegram
+          url: https://t.me/ch1ldk1ng
+        # - name: email
+        #   url: 'mailto:childking0909@gmail.com'
+      comments: true
+    fuseOpts:
+      isCaseSensitive: false
+      shouldSort: true
+      location: 0
+      distance: 1000
+      threshold: 0.4
+      minMatchCharLength: 0
+      keys:
+        - title
+        - permalink
+        - summary
+        - content
+    outputs:
+      home:
+        - HTML
+        - RSS
+        - JSON # necessary for search
+    
+# minify:
+#   disableXML: true
+#   minifyOutput: true
+# params:
+#   profileMode:
+#       enabled: true
+#       title: "<Title>" # optional default will be site title
+#       subtitle: "Dorian 的妙妙文档"
+#       imageUrl: "https://s2.loli.net/2025/10/14/z3PAUDMILET7GOV.jpg" # optional
+#       imageTitle: "dorian" # optional
+#       imageWidth: 120 # custom size
+#       imageHeight: 120 # custom size
+#       buttons:
+#           - name: Archive
+#             url: "/archive"
+
+#   env: production
+#   description: Dorian 的妙妙文档
+#   keywords:
+#     - Blog
+#     - Portfolio
+#     - PaperMod
+#   author: Dorian
+#   images:
+#     - <link or path of image for opengraph, twitter-cards>
+#   DateFormat: January 2, 2006
+#   defaultTheme: auto
+#   disableThemeToggle: false
+#   ShowReadingTime: true
+#   ShowShareButtons: true
+#   ShowPostNavLinks: true
+#   ShowBreadCrumbs: true
+#   ShowCodeCopyButtons: false
+#   ShowWordCount: true
+#   ShowRssButtonInSectionTermList: true
+#   UseHugoToc: true
+#   disableSpecial1stPost: false
+#   disableScrollToTop: false
+#   comments: true
+#   hidemeta: false
+#   hideSummary: false
+#   showtoc: false
+#   tocopen: false
+#   assets:
+#     favicon: <link / abs url>
+#     favicon16x16: <link / abs url>
+#     favicon32x32: <link / abs url>
+#     apple_touch_icon: <link / abs url>
+#     safari_pinned_tab: <link / abs url>
+#   label:
+#     text: Home
+#     icon: /apple-touch-icon.png
+#     iconHeight: 35
+#   homeInfoParams:
+#     Title: Here is Ch1ldKing
+#     Content: Welcome to my blog!
+#   socialIcons:
+#     - name: github
+#       url: https://github.com/Ch1ldKing
+#     - name: telegram
+#       url: https://t.me/ch1ldk1ng
+#     - name: stackoverflow
+#       url: https://stackoverflow.com
+#   analytics:
+#     google:
+#       SiteVerificationTag: XYZabc
+#     bing:
+#       SiteVerificationTag: XYZabc
+#     yandex:
+#       SiteVerificationTag: XYZabc
+#   cover:
+#     hidden: true
+#     hiddenInList: true
+#     hiddenInSingle: true
+#   editPost:
+#     URL: https://github.com/Ch1ldKing/myblog/content
+#     Text: Suggest Changes
+#     appendFilePath: true
+#   fuseOpts:
+#     isCaseSensitive: false
+#     shouldSort: true
+#     location: 0
+#     distance: 1000
+#     threshold: 0.4
+#     minMatchCharLength: 0
+#     keys:
+#       - title
+#       - permalink
+#       - summary
+#       - content
+# menu:
+#   main:
+#     - identifier: categories
+#       name: categories
+#       url: /categories/
+#       weight: 10
+#     - identifier: tags
+#       name: tags
+#       url: /tags/
+#       weight: 20
+#     - identifier: github
+#       name: github
+#       url: https://github.com/Ch1ldKing
+#       weight: 30
+
+# markup:
+#   highlight:
+#     noClasses: false
