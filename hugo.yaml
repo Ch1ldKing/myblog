@@ -15,26 +15,17 @@ params:
   profileMode:
       enabled: true
       title: "<Title>" # optional default will be site title
-      subtitle: "This is subtitle"
-      imageUrl: "<image link>" # optional
-      imageTitle: "<title of image as alt>" # optional
+      subtitle: "Dorian 的妙妙文档"
+      imageUrl: "https://s2.loli.net/2025/10/14/z3PAUDMILET7GOV.jpg" # optional
+      imageTitle: "dorian" # optional
       imageWidth: 120 # custom size
       imageHeight: 120 # custom size
       buttons:
           - name: Archive
             url: "/archive"
-          - name: Github
-            url: "https://github.com/"
-
-  socialIcons: # optional
-      - name: "<platform>"
-        url: "<link>"
-      - name: "<platform 2>"
-        url: "<link2>"
 
   env: production
-  title: ExampleSite
-  description: ExampleSite description
+  description: Dorian 的妙妙文档
   keywords:
     - Blog
     - Portfolio
@@ -74,12 +65,12 @@ params:
     Title: Here is Ch1ldKing
     Content: Welcome to my blog!
   socialIcons:
-    - name: twitter
-      url: https://twitter.com/
+    - name: github
+      url: https://github.com/Ch1ldKing
+    - name: telegram
+      url: https://t.me/ch1ldk1ng
     - name: stackoverflow
       url: https://stackoverflow.com
-    - name: github
-      url: https://github.com/
   analytics:
     google:
       SiteVerificationTag: XYZabc
@@ -117,10 +108,11 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: github
+      name: github
+      url: https://github.com/Ch1ldKing
       weight: 30
+
 markup:
   highlight:
     noClasses: false
