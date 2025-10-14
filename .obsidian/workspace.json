@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
+                "file": "content/zh/posts/2025-10-15_04-10-14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Maple-Theme 配合 Maple-font"
+              "title": "2025-10-15_04-10-14"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
+                "file": "content/zh/posts/2025-10-15_04-10-14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Maple-Theme 配合 Maple-font"
+              "title": "Backlinks for 2025-10-15_04-10-14"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
+                "file": "content/zh/posts/2025-10-15_04-10-14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Maple-Theme 配合 Maple-font"
+              "title": "Outgoing links from 2025-10-15_04-10-14"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/zh/posts/Maple-Theme 配合 Maple-font.md",
+                "file": "content/zh/posts/2025-10-15_04-10-14.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Maple-Theme 配合 Maple-font"
+              "title": "Outline of 2025-10-15_04-10-14"
             }
           }
         ]
@@ -172,11 +172,12 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "content/zh/posts/Maple-Theme 配合 Maple-font.md",
+    "content/zh/posts/2025-10-15_04-10-14.md",
     "layouts/_default/baseof.html",
     "layouts/_default",
     "layouts/_internal/google_analytics_async.html",
     "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
-    "content/zh/posts/Maple-Theme 配合 Maple-font.md",
     "layouts/_internal",
     "public/zh/tags/maple/index.xml",
     "public/zh/tags/maple/page/1/index.html",
@@ -184,7 +185,6 @@
     "public/zh/tags/maple/page",
     "public/zh/tags/maple/index.html",
     "public/zh/tags/maple",
-    "public/zh/tags/vscode/index.xml",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
     "content/zh/about.md",
     "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
