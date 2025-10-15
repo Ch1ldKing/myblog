@@ -24,3 +24,4 @@ UseHugoToc: true
 ---
 format.ts:1 Uncaught SyntaxError: The requested module '/src/types/index.ts' does not provide an export named 'Subtask' (at format.ts:1:10)
 
+![[CleanShot 2025-10-16 at 03.03.29@2x.png]]
