@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
+                "file": "content/zh/posts/XXX 已损坏，你应该拖到废纸篓中.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React报错 The requested module does not provide an export named 'Subtask'"
+              "title": "XXX 已损坏，你应该拖到废纸篓中"
             }
           }
         ]
@@ -183,9 +183,10 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
+    "content/zh/posts/XXX 已损坏，你应该拖到废纸篓中.md",
     "static/img/CleanShot 2025-10-16 at 03.03.29@2x.png",
     "content/zh/about.md",
-    "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
     "public/zh/tags/react/page/1/index.html",
     "public/zh/tags/react/page/1",
     "public/zh/tags/react/page",
@@ -221,7 +222,6 @@
     "content/zh/posts/2025-10-15_01-50-23.md",
     "public/favicon_io/favicon-32x32.png",
     "public/favicon_io/favicon-16x16.png",
-    "public/favicon_io/apple-touch-icon.png",
-    "public/favicon_io/android-chrome-512x512.png"
+    "public/favicon_io/apple-touch-icon.png"
   ]
 }
