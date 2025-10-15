@@ -38,11 +38,16 @@ git remote add servicecomp-origin git@github.com:Ch1ldKing/HITCS-CloudNative-Spr
 git fetch servicecomp-origin
 git subtree add --prefix=servicecomp servicecomp-origin main -m "Add servicecomp via subtree"
 
+# 暂存更改
+git stash push -u -m "wip before adding srvc-frontend"
+
 # 3) 前端 srvc-frontend（URL 和分支名请替换）
 git remote add srvc-frontend-origin <你的前端仓库URL>
 git fetch srvc-frontend-origin
 git subtree add --prefix=srvc-frontend srvc-frontend-origin <分支名> -m "Add srvc-frontend via subtree"
 
+# 改动取回来
+git stash pop
 ```
 ### 错误 1
 ```zsh
@@ -66,6 +71,7 @@ fatal: working tree has modifications.  Cannot add.
 ```zsh
 git commit -m "Initial commit before adding subtrees"
 ```
+然后再 subtree add
 ### 错误 2
 ```zsh
 $ git subtree add --prefix=servicecomp servicecomp-origin main -m "Add servicecomp via subtree"
@@ -74,3 +80,5 @@ fatal: prefix 'servicecomp' already exists.
 ```
 
 确保你已经执行了 `mv` 来产生 folder.tmp 进行备份，然后删除这个 folder 就行
+
+然后再 subtree add
