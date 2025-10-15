@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/在一个 Git 仓库中聚合两个项目.md",
+                "file": "content/zh/posts/哈工大云原生实验总结.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "在一个 Git 仓库中聚合两个项目"
+              "title": "哈工大云原生实验总结"
             }
           }
         ]
@@ -184,7 +184,13 @@
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
     "content/zh/posts/Ubuntu 安装 K8s 所有的坑.md",
+    "content/zh/posts/哈工大云原生实验总结.md",
+    "content/zh/posts/Tailwind SVG 颜色问题.md",
+    "content/zh/posts/Maple-Theme 配合 Maple-font.md",
+    "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
+    "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
     "content/zh/posts/在一个 Git 仓库中聚合两个项目.md",
+    "content/zh/posts/搭建一个 Vite + React 项目.md",
     "public/zh/tags/nacos/index.xml",
     "public/zh/tags/nacos/page/1/index.html",
     "public/zh/tags/nacos/page/1",
@@ -195,11 +201,7 @@
     "public/zh/tags/cicd/page/1/index.html",
     "public/zh/tags/cicd/page/1",
     "public/zh/tags/cicd/page",
-    "content/zh/posts/Maple-Theme 配合 Maple-font.md",
-    "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
-    "content/zh/posts/Tailwind SVG 颜色问题.md",
     "content/zh/about.md",
-    "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
     "archetypes/default.md",
     "content/zh/posts/first.md",
     "content/zh/posts/2025-10-15_02-18-20.md",

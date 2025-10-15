@@ -123,7 +123,7 @@ spec:
       nodePort:   33066            # <— the port on each node’s IP
 ```
 范围可调
-## Nacos pod has unbound immediate PersistentVolumeClaims
+### Nacos pod has unbound immediate PersistentVolumeClaims
 ```bash
 $ kubectl get pvc data-nacos-0
 
@@ -356,7 +356,7 @@ externalTrafficPolicy: Local
 kubectl patch svc ingress-nginx-controller -n ingress-nginx \
   -p '{"spec":{"externalTrafficPolicy":"Cluster"}}'
 ```
-## Helm 安装Jenkins
+### Helm 安装Jenkins
 ```bash
 $ helm repo add jenkinsci https://charts.jenkins.io
 helm repo update
@@ -377,7 +377,7 @@ helm install jenkins jenkinsci/jenkins \
 ```bash
 kubectl exec -n cicd -it jenkins-0 -c jenkins -- cat /run/secrets/additional/chart-admin-password && echo
 ```
-## error: unknown command "port‑forward" for "kubectl"
+### error: unknown command "port‑forward" for "kubectl"
 复制下面这个,-是 ASCII 字符
 ```bash
 kubectl port-forward -n cicd svc/jenkins 8080:8080
