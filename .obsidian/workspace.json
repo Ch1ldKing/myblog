@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/about.md",
+                "file": "content/zh/posts/2025-10-16_03-00-23.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "2025-10-16_03-00-23"
             }
           }
         ]
@@ -183,6 +183,8 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
+    "content/zh/about.md",
+    "content/zh/posts/2025-10-16_03-00-23.md",
     "public/zh/tags/react/page/1/index.html",
     "public/zh/tags/react/page/1",
     "public/zh/tags/react/page",
@@ -193,7 +195,6 @@
     "public/zh/tags/vite/page/1",
     "public/zh/tags/vite/page",
     "public/zh/tags/vite/index.xml",
-    "public/zh/tags/vite/index.html",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
     "content/zh/posts/哈工大云原生实验总结.md",
     "content/zh/posts/Ubuntu 安装 K8s 所有的坑.md",
@@ -202,7 +203,6 @@
     "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",
     "content/zh/posts/在一个 Git 仓库中聚合两个项目.md",
     "content/zh/posts/搭建一个 Vite + React 项目.md",
-    "content/zh/about.md",
     "archetypes/default.md",
     "content/zh/posts/first.md",
     "content/zh/posts/2025-10-15_02-18-20.md",
