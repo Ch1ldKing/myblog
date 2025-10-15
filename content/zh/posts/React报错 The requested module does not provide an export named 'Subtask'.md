@@ -24,5 +24,6 @@ UseHugoToc: true
 ---
 format.ts:1 Uncaught SyntaxError: The requested module '/src/types/index.ts' does not provide an export named 'Subtask' (at format.ts:1:10)
 
-![](/img/CleanShot 2025-10-16 at 03.03.29@2x.png)
+![CleanShot 2025-10-16 at 03.25.35@2x.png](https://s2.loli.net/2025/10/16/32w8e9TXmdv1SQj.png)
+
 添加 type 即可
