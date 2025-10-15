@@ -1,1 +1,7 @@
-{}
+{
+  "trashOption": "local",
+  "newFileLocation": "root",
+  "newFileFolderPath": "static/img",
+  "attachmentFolderPath": "static/img",
+  "alwaysUpdateLinks": true
+}
