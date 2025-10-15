@@ -5,7 +5,7 @@ lastmod: 2025-10-15T14:22:14+08:00
 tags:
   - git
 author: Dorianyang
-draft: false
+draft: true
 showToc: true
 TocOpen: false
 hidemeta: false
@@ -42,5 +42,35 @@ git subtree add --prefix=servicecomp servicecomp-origin main -m "Add servicecomp
 git remote add srvc-frontend-origin <你的前端仓库URL>
 git fetch srvc-frontend-origin
 git subtree add --prefix=srvc-frontend srvc-frontend-origin <分支名> -m "Add srvc-frontend via subtree"
+
+```
+### 错误 1
+```zsh
+$ git subtree add --prefix=servicecomp servicecomp-origin main -m "Add servicecomp via subtree"
+
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: working tree has modifications.  Cannot add.
 ```
 
+1. **fatal: ambiguous argument 'HEAD'**
+    
+    你的仓库目前还没有任何提交（即没有 HEAD），所以 Git 无法在基础版本上合并 subtree。
+    
+2. **fatal: working tree has modifications**
+    
+    表示当前工作区有未提交的更改（比如 .gitignore 或其它修改）。
+
+先任意提交一个内容，然后再操作
+```zsh
+git commit -m "Initial commit before adding subtrees"
+```
+### 错误 2
+```zsh
+$ git subtree add --prefix=servicecomp servicecomp-origin main -m "Add servicecomp via subtree"
+
+fatal: prefix 'servicecomp' already exists.
+```
+
+确保你已经执行了 `mv` 来产生 folder.tmp 进行备份，然后删除这个 folder 就行
