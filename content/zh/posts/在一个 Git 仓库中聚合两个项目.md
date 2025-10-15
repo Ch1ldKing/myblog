@@ -30,6 +30,7 @@ git rm --cached -r servicecomp srvc-frontend || true
 mv servicecomp servicecomp.tmp
 mv srvc-frontend srvc-frontend.tmp
 ```
+
 两个子项目的远端 URL 加进来，起两个新名字
 ```zsh
 # 2) 后端 servicecomp
@@ -42,3 +43,4 @@ git remote add srvc-frontend-origin <你的前端仓库URL>
 git fetch srvc-frontend-origin
 git subtree add --prefix=srvc-frontend srvc-frontend-origin <分支名> -m "Add srvc-frontend via subtree"
 ```
+
