@@ -1,11 +1,11 @@
 ---
-title: "2025 10 16_03 00 23"
+title: React报错 The requested module does not provide an export named 'Subtask'
 date: 2025-10-16T03:00:23+08:00
 lastmod: 2025-10-16T03:00:23+08:00
-tags: ["problem"]
-author: "Dorianyang"
-
-# 展示类配置（按需精简）
+tags:
+  - problem
+  - React
+author: Dorianyang
 draft: false
 showToc: true
 TocOpen: false
@@ -22,3 +22,5 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
+format.ts:1 Uncaught SyntaxError: The requested module '/src/types/index.ts' does not provide an export named 'Subtask' (at format.ts:1:10)
+
