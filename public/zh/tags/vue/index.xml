@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vue on Dorianyang 的妙妙文档</title>
-    <link>http://localhost:1313/zh/tags/vue/</link>
+    <link>https://dorianyang.com/zh/tags/vue/</link>
     <description>Recent content in Vue on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 15 Oct 2025 02:20:15 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/zh/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Jul 2025 02:20:15 +0800</lastBuildDate>
+    <atom:link href="https://dorianyang.com/zh/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SVG 颜色问题</title>
-      <link>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Wed, 15 Oct 2025 02:20:15 +0800</pubDate>
-      <guid>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</guid>
+      <link>https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 16 Jul 2025 02:20:15 +0800</pubDate>
+      <guid>https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=&amp;ldquo;currentColor&amp;rdquo;，然后就可以在&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vue&#34; data-lang=&#34;vue&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;svg&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1749727002733&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;icon&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;viewBox&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0 0 1394 1024&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt;

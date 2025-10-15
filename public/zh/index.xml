@@ -2,17 +2,105 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Dorianyang 的妙妙文档</title>
-    <link>http://localhost:1313/zh/</link>
+    <link>https://dorianyang.com/zh/</link>
     <description>Recent content on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 15 Oct 2025 04:10:14 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Oct 2025 17:56:10 +0800</lastBuildDate>
+    <atom:link href="https://dorianyang.com/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建一个 Vite &#43; React 项目</title>
+      <link>https://dorianyang.com/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Wed, 15 Oct 2025 17:56:10 +0800</pubDate>
+      <guid>https://dorianyang.com/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</guid>
+      <description>&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
+&lt;p&gt;首先你需要安装 node.js，mac 使用如下命令，windows  linux 请自查&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install node
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后全局安装 pnpm（我从来不用 npm，pnpm 是最好的）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install pnpm -g
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后在&lt;strong&gt;项目路径&lt;/strong&gt;中使用 vite 初始化项目&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm create vite . -- --template react-ts
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下是我的一些选择&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ pnpm create vite . -- --template react-ts
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.../199e71df160-9ee0                     |   +1 +
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.../199e71df160-9ee0                     | Progress: resolved 1, reused 0, downloaded 1, added 1, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Current directory is not empty. Please choose how to proceed:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│  Ignore files and &lt;span style=&#34;color:#66d9ef&#34;&gt;continue&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Package name:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│  iselect-ui
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Select a framework:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│  React
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Select a variant:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│  TypeScript + React Compiler
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Use rolldown-vite &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Experimental&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;?:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│  No
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Install with pnpm and start now?
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│  Yes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Scaffolding project in /Users/dorian/Documents/Programme/iSelect/iSelect-UI...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;◇  Installing dependencies with pnpm...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  VITE v7.1.10  ready in &lt;span style=&#34;color:#ae81ff&#34;&gt;603&lt;/span&gt; ms
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ➜  Local:   http://localhost:5173/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ➜  Network: use --host to expose
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ➜  press h + enter to show help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后进入浏览器打开网址就可以看到啦&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在一个 Git 仓库中聚合两个项目</title>
+      <link>https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Wed, 15 Oct 2025 14:22:14 +0800</pubDate>
+      <guid>https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</guid>
+      <description>&lt;h2 id=&#34;主要操作&#34;&gt;主要操作&lt;/h2&gt;
+&lt;p&gt;现在我们有两个仓库，servicecomp 和 srvc-frontend，我想把他们在一个仓库中聚合一下（比如前后端项目），使用 subtree&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 0) 若父仓库已误把两个子仓库当普通目录 add 了，先从索引移除（不删本地文件）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm --cached -r servicecomp srvc-frontend &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 1) 临时挪开本地已有目录（subtree 会自己创建对应目录）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mv servicecomp servicecomp.tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mv srvc-frontend srvc-frontend.tmp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;两个子项目的远端 URL 加进来，起两个新名字&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 2) 后端 servicecomp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add servicecomp-origin git@github.com:Ch1ldKing/HITCS-CloudNative-SpringCloud.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git fetch servicecomp-origin
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git subtree add --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;servicecomp servicecomp-origin main -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Add servicecomp via subtree&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 暂存更改&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash push -u -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wip before adding srvc-frontend&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 3) 前端 srvc-frontend（URL 和分支名请替换）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add srvc-frontend-origin &amp;lt;你的前端仓库URL&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git fetch srvc-frontend-origin
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git subtree add --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;srvc-frontend srvc-frontend-origin &amp;lt;分支名&amp;gt; -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Add srvc-frontend via subtree&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 改动取回来&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash pop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;错误&#34;&gt;错误&lt;/h2&gt;
+&lt;h3 id=&#34;错误-1&#34;&gt;错误 1&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git subtree add --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;servicecomp servicecomp-origin main -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Add servicecomp via subtree&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fatal: ambiguous argument &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;HEAD&amp;#39;&lt;/span&gt;: unknown revision or path not in the working tree.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Use &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--&amp;#39;&lt;/span&gt; to separate paths from revisions, like this:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;git &amp;lt;command&amp;gt; [&amp;lt;revision&amp;gt;...] -- [&amp;lt;file&amp;gt;...]&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fatal: working tree has modifications.  Cannot add.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;fatal: ambiguous argument &amp;lsquo;HEAD&amp;rsquo;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ubuntu 安装 K8s 所有的坑</title>
-      <link>http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</link>
+      <link>https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</link>
       <pubDate>Wed, 15 Oct 2025 04:10:14 +0800</pubDate>
-      <guid>http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</guid>
+      <guid>https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</guid>
       <description>&lt;h3 id=&#34;在ubuntu-安装时手动配置-ipv4name-servers-和-searchdomains-是什么&#34;&gt;在ubuntu 安装时，手动配置 ipv4，name servers 和 searchdomains 是什么&lt;/h3&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;Name Servers（DNS 服务器）
@@ -45,9 +133,9 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
     </item>
     <item>
       <title>SVG 颜色问题</title>
-      <link>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Wed, 15 Oct 2025 02:20:15 +0800</pubDate>
-      <guid>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</guid>
+      <link>https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 16 Jul 2025 02:20:15 +0800</pubDate>
+      <guid>https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=&amp;ldquo;currentColor&amp;rdquo;，然后就可以在&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vue&#34; data-lang=&#34;vue&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;svg&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1749727002733&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;icon&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;viewBox&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0 0 1394 1024&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt;
@@ -67,10 +155,43 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;还可以直接指定颜色&lt;/p&gt;</description>
     </item>
     <item>
+      <title>哈工大云原生实验总结</title>
+      <link>https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 15 Jun 2025 18:02:27 +0800</pubDate>
+      <guid>https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Ch1ldKing/HITCS-CloudNative&#34;&gt;Github 链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;作业要求&#34;&gt;作业要求：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;VmWare 在三台 Ubuntu 虚拟机动手实现 K8S 集群&lt;/li&gt;
+&lt;li&gt;实现 SpringCloud，服务注册，服务发现，服务负载均衡&lt;/li&gt;
+&lt;li&gt;实现服务远程调用 OpenFeign&lt;/li&gt;
+&lt;li&gt;实现 DevOps 自动 CI/CD（Jenkins 或 Github Actions）&lt;/li&gt;
+&lt;li&gt;实现 至少 7 个微服务&lt;/li&gt;
+&lt;li&gt;实现前端&lt;/li&gt;
+&lt;li&gt;实现 Agent 工作流并能体现在前端界面&lt;/li&gt;
+&lt;li&gt;实现 K8S 集群监控 metrics&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;我们做的&#34;&gt;我们做的：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 Ubuntu 22.04 搭建 K8S 集群&lt;/li&gt;
+&lt;li&gt;使用 Kubernetes Dashboard 与 Grafana 进行集群监控&lt;/li&gt;
+&lt;li&gt;使用 NFS 动态分配微服务容器空间&lt;/li&gt;
+&lt;li&gt;使用 Ingress-nginx 实现域名访问集群服务（对 nacos，grafana，sentinel 等进行 DNS 解析与负载均衡）&lt;/li&gt;
+&lt;li&gt;使用 Nacos 实现服务注册（实验指导书使用 Eureka）&lt;/li&gt;
+&lt;li&gt;使用 OpenFeign 实现服务远程调用&lt;/li&gt;
+&lt;li&gt;使用 SpringGateway 进行服务路由与负载均衡&lt;/li&gt;
+&lt;li&gt;使用 Sentinel 进行服务限流，流量监控&lt;/li&gt;
+&lt;li&gt;使用 Nacos 实现服务配置中心&lt;/li&gt;
+&lt;li&gt;使用 Dify 搭建 Agen t工作流&lt;/li&gt;
+&lt;li&gt;使用 Jenkins 自动 CICD&lt;/li&gt;
+&lt;li&gt;使用 SpringAI 搭建 MCP 服务器供 Agent 使用&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
       <title>Maple-Theme 配合 Maple-font</title>
-      <link>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</link>
+      <link>https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</link>
       <pubDate>Fri, 09 May 2025 03:34:35 +0800</pubDate>
-      <guid>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</guid>
+      <guid>https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</guid>
       <description>&lt;p&gt;在 VSCode 安装了 Maple 主题之后，我们可能会遇到一些字体不生效，或者[TODO]标签没法主阿们渲染的情况，就需要修改系统中 &lt;code&gt;.vscode/extensions/subframe7536.theme-maple-0.7.16/themes/maple-dark-color-theme.json&lt;/code&gt;，改为以下内容（同样适用于 kiro,cursor 等）&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Maple Dark&amp;#34;&lt;/span&gt;,
@@ -1830,18 +1951,18 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
     </item>
     <item>
       <title>gRPC 必须有默认值导致问题（null 默认为 0）</title>
-      <link>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</link>
+      <link>https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</link>
       <pubDate>Sun, 15 Sep 2024 11:30:03 +0000</pubDate>
-      <guid>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</guid>
+      <guid>https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</guid>
       <description>&lt;p&gt;gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0.
 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的
 所以设定一个特殊值，来解析为 null，返回给前端&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dataframe NaN 值遇到 json 的问题</title>
-      <link>http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <link>https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 21 Aug 2024 11:30:03 +0000</pubDate>
-      <guid>http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;我的需求是把 df 的 NaN 转 None，方便后续 json 转 null
 看下面这段代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 计算 MA 指标&lt;/span&gt;
@@ -1881,9 +2002,9 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
     </item>
     <item>
       <title>👏欢迎莅临 Dorian 的妙妙文档站</title>
-      <link>http://localhost:1313/zh/about/</link>
+      <link>https://dorianyang.com/zh/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/zh/about/</guid>
+      <guid>https://dorianyang.com/zh/about/</guid>
       <description>&lt;p&gt;Hi，我是 Dorian 🥰&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;em&gt;原网络名 ChildKing，后来因实习而改更&lt;/em&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;本人 ENFJ，本科就读 HIT 软工，目前正在参加 NUS Master 项目&amp;hellip;曾在多个小公司实习，最近一段圆梦企鹅🐧&lt;/p&gt;

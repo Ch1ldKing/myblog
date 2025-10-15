@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hit-Project on Dorianyang 的妙妙文档</title>
+    <link>https://dorianyang.com/zh/tags/hit-project/</link>
+    <description>Recent content in Hit-Project on Dorianyang 的妙妙文档</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 20 Jun 2025 18:02:27 +0800</lastBuildDate>
+    <atom:link href="https://dorianyang.com/zh/tags/hit-project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>哈工大云原生实验总结</title>
+      <link>https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 15 Jun 2025 18:02:27 +0800</pubDate>
+      <guid>https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Ch1ldKing/HITCS-CloudNative&#34;&gt;Github 链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;作业要求&#34;&gt;作业要求：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;VmWare 在三台 Ubuntu 虚拟机动手实现 K8S 集群&lt;/li&gt;
+&lt;li&gt;实现 SpringCloud，服务注册，服务发现，服务负载均衡&lt;/li&gt;
+&lt;li&gt;实现服务远程调用 OpenFeign&lt;/li&gt;
+&lt;li&gt;实现 DevOps 自动 CI/CD（Jenkins 或 Github Actions）&lt;/li&gt;
+&lt;li&gt;实现 至少 7 个微服务&lt;/li&gt;
+&lt;li&gt;实现前端&lt;/li&gt;
+&lt;li&gt;实现 Agent 工作流并能体现在前端界面&lt;/li&gt;
+&lt;li&gt;实现 K8S 集群监控 metrics&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;我们做的&#34;&gt;我们做的：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 Ubuntu 22.04 搭建 K8S 集群&lt;/li&gt;
+&lt;li&gt;使用 Kubernetes Dashboard 与 Grafana 进行集群监控&lt;/li&gt;
+&lt;li&gt;使用 NFS 动态分配微服务容器空间&lt;/li&gt;
+&lt;li&gt;使用 Ingress-nginx 实现域名访问集群服务（对 nacos，grafana，sentinel 等进行 DNS 解析与负载均衡）&lt;/li&gt;
+&lt;li&gt;使用 Nacos 实现服务注册（实验指导书使用 Eureka）&lt;/li&gt;
+&lt;li&gt;使用 OpenFeign 实现服务远程调用&lt;/li&gt;
+&lt;li&gt;使用 SpringGateway 进行服务路由与负载均衡&lt;/li&gt;
+&lt;li&gt;使用 Sentinel 进行服务限流，流量监控&lt;/li&gt;
+&lt;li&gt;使用 Nacos 实现服务配置中心&lt;/li&gt;
+&lt;li&gt;使用 Dify 搭建 Agen t工作流&lt;/li&gt;
+&lt;li&gt;使用 Jenkins 自动 CICD&lt;/li&gt;
+&lt;li&gt;使用 SpringAI 搭建 MCP 服务器供 Agent 使用&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

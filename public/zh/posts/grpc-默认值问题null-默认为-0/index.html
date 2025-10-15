@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>gRPC 必须有默认值导致问题（null 默认为 0） | Dorianyang 的妙妙文档</title>
 <meta name="keywords" content="problem, grpc, go">
 <meta name="description" content="gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0.
 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的
 所以设定一个特殊值，来解析为 null，返回给前端">
 <meta name="author" content="Dorianyang">
-<link rel="canonical" href="http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/">
+<link rel="canonical" href="https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.870ec7a738304234433d49dc79f1ec1321b5a5537afaca6d257283b72972b738.css" integrity="sha256-hw7HpzgwQjRDPUncefHsEyG1pVN6&#43;sptJXKDtylytzg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/static/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/static/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/static/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/static/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://dorianyang.com/static/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dorianyang.com/static/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dorianyang.com/static/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://dorianyang.com/static/apple-touch-icon.png">
+<link rel="mask-icon" href="https://dorianyang.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/">
+<link rel="alternate" hreflang="zh" href="https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,6 +58,91 @@
 
     </style>
 </noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CR1332THT7');
+        }
+      </script><meta property="og:url" content="https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/">
+  <meta property="og:site_name" content="Dorianyang 的妙妙文档">
+  <meta property="og:title" content="gRPC 必须有默认值导致问题（null 默认为 0）">
+  <meta property="og:description" content="gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0. 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的 所以设定一个特殊值，来解析为 null，返回给前端">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-15T11:30:03+00:00">
+    <meta property="article:modified_time" content="2024-09-15T11:30:03+00:00">
+    <meta property="article:tag" content="Problem">
+    <meta property="article:tag" content="Grpc">
+    <meta property="article:tag" content="Go">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gRPC 必须有默认值导致问题（null 默认为 0）">
+<meta name="twitter:description" content="gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0.
+我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的
+所以设定一个特殊值，来解析为 null，返回给前端">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://dorianyang.com/zh/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "gRPC 必须有默认值导致问题（null 默认为 0）",
+      "item": "https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "gRPC 必须有默认值导致问题（null 默认为 0）",
+  "name": "gRPC 必须有默认值导致问题（null 默认为 0）",
+  "description": "gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0. 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的 所以设定一个特殊值，来解析为 null，返回给前端\n",
+  "keywords": [
+    "problem", "grpc", "go"
+  ],
+  "articleBody": "gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0. 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的 所以设定一个特殊值，来解析为 null，返回给前端\n",
+  "wordCount" : "18",
+  "inLanguage": "zh",
+  "datePublished": "2024-09-15T11:30:03Z",
+  "dateModified": "2024-09-15T11:30:03Z",
+  "author":{
+    "@type": "Person",
+    "name": "Dorianyang"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dorianyang 的妙妙文档",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dorianyang.com/static/favicon.ico"
+    }
+  }
+}
+</script>
 
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
@@ -85,8 +170,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/zh/" accesskey="h" title="Ch1ldKing (Alt + H)">
-                <img src="http://localhost:1313/static/apple-touch-icon.png" alt="" aria-label="logo"
+            <a href="https://dorianyang.com/zh/" accesskey="h" title="Ch1ldKing (Alt + H)">
+                <img src="https://dorianyang.com/static/apple-touch-icon.png" alt="" aria-label="logo"
                     height="35">Ch1ldKing</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -111,7 +196,7 @@
                 </button>
                     <ul class="lang-switch"><li>|</li>
                         <li>
-                            <a href="http://localhost:1313/en/" title="English"
+                            <a href="https://dorianyang.com/en/" title="English"
                                 aria-label="English">En</a>
                         </li>
                     </ul>
@@ -119,22 +204,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/zh/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                <a href="https://dorianyang.com/zh/search/" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/about/" title="关于">
+                <a href="https://dorianyang.com/zh/about/" title="关于">
                     <span>关于</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/tags/" title="分类">
+                <a href="https://dorianyang.com/zh/tags/" title="分类">
                     <span>分类</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/archives/" title="时间线">
+                <a href="https://dorianyang.com/zh/archives/" title="时间线">
                     <span>时间线</span>
                 </a>
             </li>
@@ -145,7 +230,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/zh/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/zh/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://dorianyang.com/zh/">主页</a>&nbsp;»&nbsp;<a href="https://dorianyang.com/zh/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       gRPC 必须有默认值导致问题（null 默认为 0）
     </h1>
@@ -163,17 +248,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/zh/tags/problem/">Problem</a></li>
-      <li><a href="http://localhost:1313/zh/tags/grpc/">Grpc</a></li>
-      <li><a href="http://localhost:1313/zh/tags/go/">Go</a></li>
+      <li><a href="https://dorianyang.com/zh/tags/problem/">Problem</a></li>
+      <li><a href="https://dorianyang.com/zh/tags/grpc/">Grpc</a></li>
+      <li><a href="https://dorianyang.com/zh/tags/go/">Go</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/">
+  <a class="prev" href="https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/">
     <span class="title">« 上一页</span>
     <br>
     <span>Maple-Theme 配合 Maple-font</span>
   </a>
-  <a class="next" href="http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/">
+  <a class="next" href="https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/">
     <span class="title">下一页 »</span>
     <br>
     <span>Dataframe NaN 值遇到 json 的问题</span>
@@ -192,7 +277,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/zh/">Dorianyang 的妙妙文档</a></span> · 
+        <span>&copy; 2025 <a href="https://dorianyang.com/zh/">Dorianyang 的妙妙文档</a></span> · 
 
     <span>
         <a href="https://icp.gov.moe/?keyword=20256818" target="_blank">萌ICP备20256818号</a>

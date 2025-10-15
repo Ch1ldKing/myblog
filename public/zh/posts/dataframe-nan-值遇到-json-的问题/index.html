@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Dataframe NaN 值遇到 json 的问题 | Dorianyang 的妙妙文档</title>
 <meta name="keywords" content="problem, pandas, json">
 <meta name="description" content="我的需求是把 df 的 NaN 转 None，方便后续 json 转 null
@@ -44,16 +44,16 @@
    print(export_df[&#34;MA10&#34;].head(10))
 ">
 <meta name="author" content="Dorianyang">
-<link rel="canonical" href="http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.870ec7a738304234433d49dc79f1ec1321b5a5537afaca6d257283b72972b738.css" integrity="sha256-hw7HpzgwQjRDPUncefHsEyG1pVN6&#43;sptJXKDtylytzg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/static/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/static/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/static/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/static/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://dorianyang.com/static/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dorianyang.com/static/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dorianyang.com/static/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://dorianyang.com/static/apple-touch-icon.png">
+<link rel="mask-icon" href="https://dorianyang.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/">
+<link rel="alternate" hreflang="zh" href="https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/">
 <noscript>
     <style>
         #theme-toggle,
@@ -91,6 +91,126 @@
 
     </style>
 </noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CR1332THT7');
+        }
+      </script><meta property="og:url" content="https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/">
+  <meta property="og:site_name" content="Dorianyang 的妙妙文档">
+  <meta property="og:title" content="Dataframe NaN 值遇到 json 的问题">
+  <meta property="og:description" content="我的需求是把 df 的 NaN 转 None，方便后续 json 转 null 看下面这段代码
+# 计算 MA 指标 df[&#34;MA5&#34;] = df[&#34;Close&#34;].rolling(window=5).mean().round(2) df[&#34;MA10&#34;] = df[&#34;Close&#34;].rolling(window=10).mean().round(2) df[&#34;MA30&#34;] = df[&#34;Close&#34;].rolling(window=30).mean().round(2) df[&#34;MA60&#34;] = df[&#34;Close&#34;].rolling(window=60).mean().round(2) # 将非空数据保留，空数据用None替换 df = df.astype(object) df = df.where(df.notnull(), None) print(df[&#34;MA10&#34;].head(10)) kline_data = df[ [ &#34;time&#34;, &#34;Open&#34;, &#34;Close&#34;, &#34;High&#34;, &#34;Low&#34;, &#34;Volume&#34;, &#34;MA5&#34;, &#34;MA10&#34;, &#34;MA30&#34;, &#34;MA60&#34;, ] ].to_dict(orient=&#34;records&#34;) 死活不行，输出的 MA 值仍然有 NaN 最后通过新建一个 df 解决
+export_df = df.astype(object) export_df = export_df.where(export_df.notna(), None) # 调试：确认 NaN 已变成 None print(export_df[&#34;MA10&#34;].head(10)) ">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-08-21T11:30:03+00:00">
+    <meta property="article:modified_time" content="2024-08-21T11:30:03+00:00">
+    <meta property="article:tag" content="Problem">
+    <meta property="article:tag" content="Pandas">
+    <meta property="article:tag" content="Json">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dataframe NaN 值遇到 json 的问题">
+<meta name="twitter:description" content="我的需求是把 df 的 NaN 转 None，方便后续 json 转 null
+看下面这段代码
+    # 计算 MA 指标
+    df[&#34;MA5&#34;] = df[&#34;Close&#34;].rolling(window=5).mean().round(2)
+    df[&#34;MA10&#34;] = df[&#34;Close&#34;].rolling(window=10).mean().round(2)
+    df[&#34;MA30&#34;] = df[&#34;Close&#34;].rolling(window=30).mean().round(2)
+    df[&#34;MA60&#34;] = df[&#34;Close&#34;].rolling(window=60).mean().round(2)
+
+    # 将非空数据保留，空数据用None替换
+    df = df.astype(object)
+    df = df.where(df.notnull(), None)
+
+    print(df[&#34;MA10&#34;].head(10))
+
+    kline_data = df[
+        [
+            &#34;time&#34;,
+            &#34;Open&#34;,
+            &#34;Close&#34;,
+            &#34;High&#34;,
+            &#34;Low&#34;,
+            &#34;Volume&#34;,
+            &#34;MA5&#34;,
+            &#34;MA10&#34;,
+            &#34;MA30&#34;,
+            &#34;MA60&#34;,
+        ]
+    ].to_dict(orient=&#34;records&#34;)
+死活不行，输出的 MA 值仍然有 NaN
+最后通过新建一个 df 解决
+   export_df = df.astype(object)              
+   export_df = export_df.where(export_df.notna(), None)  
+
+   # 调试：确认 NaN 已变成 None
+   print(export_df[&#34;MA10&#34;].head(10))
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://dorianyang.com/zh/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Dataframe NaN 值遇到 json 的问题",
+      "item": "https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Dataframe NaN 值遇到 json 的问题",
+  "name": "Dataframe NaN 值遇到 json 的问题",
+  "description": "我的需求是把 df 的 NaN 转 None，方便后续 json 转 null 看下面这段代码\n# 计算 MA 指标 df[\u0026#34;MA5\u0026#34;] = df[\u0026#34;Close\u0026#34;].rolling(window=5).mean().round(2) df[\u0026#34;MA10\u0026#34;] = df[\u0026#34;Close\u0026#34;].rolling(window=10).mean().round(2) df[\u0026#34;MA30\u0026#34;] = df[\u0026#34;Close\u0026#34;].rolling(window=30).mean().round(2) df[\u0026#34;MA60\u0026#34;] = df[\u0026#34;Close\u0026#34;].rolling(window=60).mean().round(2) # 将非空数据保留，空数据用None替换 df = df.astype(object) df = df.where(df.notnull(), None) print(df[\u0026#34;MA10\u0026#34;].head(10)) kline_data = df[ [ \u0026#34;time\u0026#34;, \u0026#34;Open\u0026#34;, \u0026#34;Close\u0026#34;, \u0026#34;High\u0026#34;, \u0026#34;Low\u0026#34;, \u0026#34;Volume\u0026#34;, \u0026#34;MA5\u0026#34;, \u0026#34;MA10\u0026#34;, \u0026#34;MA30\u0026#34;, \u0026#34;MA60\u0026#34;, ] ].to_dict(orient=\u0026#34;records\u0026#34;) 死活不行，输出的 MA 值仍然有 NaN 最后通过新建一个 df 解决\nexport_df = df.astype(object) export_df = export_df.where(export_df.notna(), None) # 调试：确认 NaN 已变成 None print(export_df[\u0026#34;MA10\u0026#34;].head(10)) ",
+  "keywords": [
+    "problem", "pandas", "json"
+  ],
+  "articleBody": "我的需求是把 df 的 NaN 转 None，方便后续 json 转 null 看下面这段代码\n# 计算 MA 指标 df[\"MA5\"] = df[\"Close\"].rolling(window=5).mean().round(2) df[\"MA10\"] = df[\"Close\"].rolling(window=10).mean().round(2) df[\"MA30\"] = df[\"Close\"].rolling(window=30).mean().round(2) df[\"MA60\"] = df[\"Close\"].rolling(window=60).mean().round(2) # 将非空数据保留，空数据用None替换 df = df.astype(object) df = df.where(df.notnull(), None) print(df[\"MA10\"].head(10)) kline_data = df[ [ \"time\", \"Open\", \"Close\", \"High\", \"Low\", \"Volume\", \"MA5\", \"MA10\", \"MA30\", \"MA60\", ] ].to_dict(orient=\"records\") 死活不行，输出的 MA 值仍然有 NaN 最后通过新建一个 df 解决\nexport_df = df.astype(object) export_df = export_df.where(export_df.notna(), None) # 调试：确认 NaN 已变成 None print(export_df[\"MA10\"].head(10)) ",
+  "wordCount" : "72",
+  "inLanguage": "zh",
+  "datePublished": "2024-08-21T11:30:03Z",
+  "dateModified": "2024-08-21T11:30:03Z",
+  "author":{
+    "@type": "Person",
+    "name": "Dorianyang"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dorianyang 的妙妙文档",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dorianyang.com/static/favicon.ico"
+    }
+  }
+}
+</script>
 
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
@@ -118,8 +238,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/zh/" accesskey="h" title="Ch1ldKing (Alt + H)">
-                <img src="http://localhost:1313/static/apple-touch-icon.png" alt="" aria-label="logo"
+            <a href="https://dorianyang.com/zh/" accesskey="h" title="Ch1ldKing (Alt + H)">
+                <img src="https://dorianyang.com/static/apple-touch-icon.png" alt="" aria-label="logo"
                     height="35">Ch1ldKing</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -144,7 +264,7 @@
                 </button>
                     <ul class="lang-switch"><li>|</li>
                         <li>
-                            <a href="http://localhost:1313/en/" title="English"
+                            <a href="https://dorianyang.com/en/" title="English"
                                 aria-label="English">En</a>
                         </li>
                     </ul>
@@ -152,22 +272,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/zh/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                <a href="https://dorianyang.com/zh/search/" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/about/" title="关于">
+                <a href="https://dorianyang.com/zh/about/" title="关于">
                     <span>关于</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/tags/" title="分类">
+                <a href="https://dorianyang.com/zh/tags/" title="分类">
                     <span>分类</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/zh/archives/" title="时间线">
+                <a href="https://dorianyang.com/zh/archives/" title="时间线">
                     <span>时间线</span>
                 </a>
             </li>
@@ -178,7 +298,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/zh/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/zh/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://dorianyang.com/zh/">主页</a>&nbsp;»&nbsp;<a href="https://dorianyang.com/zh/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Dataframe NaN 值遇到 json 的问题
     </h1>
@@ -228,12 +348,12 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/zh/tags/problem/">Problem</a></li>
-      <li><a href="http://localhost:1313/zh/tags/pandas/">Pandas</a></li>
-      <li><a href="http://localhost:1313/zh/tags/json/">Json</a></li>
+      <li><a href="https://dorianyang.com/zh/tags/problem/">Problem</a></li>
+      <li><a href="https://dorianyang.com/zh/tags/pandas/">Pandas</a></li>
+      <li><a href="https://dorianyang.com/zh/tags/json/">Json</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/">
+  <a class="prev" href="https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/">
     <span class="title">« 上一页</span>
     <br>
     <span>gRPC 必须有默认值导致问题（null 默认为 0）</span>
@@ -252,7 +372,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/zh/">Dorianyang 的妙妙文档</a></span> · 
+        <span>&copy; 2025 <a href="https://dorianyang.com/zh/">Dorianyang 的妙妙文档</a></span> · 
 
     <span>
         <a href="https://icp.gov.moe/?keyword=20256818" target="_blank">萌ICP备20256818号</a>

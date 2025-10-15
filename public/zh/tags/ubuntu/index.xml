@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ubuntu on Dorianyang 的妙妙文档</title>
-    <link>http://localhost:1313/zh/tags/ubuntu/</link>
+    <link>https://dorianyang.com/zh/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 15 Oct 2025 04:10:14 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/zh/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dorianyang.com/zh/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Maple-Theme 配合 Maple-font</title>
-      <link>http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</link>
+      <title>Ubuntu 安装 K8s 所有的坑</title>
+      <link>https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</link>
       <pubDate>Wed, 15 Oct 2025 04:10:14 +0800</pubDate>
-      <guid>http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</guid>
+      <guid>https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</guid>
       <description>&lt;h3 id=&#34;在ubuntu-安装时手动配置-ipv4name-servers-和-searchdomains-是什么&#34;&gt;在ubuntu 安装时，手动配置 ipv4，name servers 和 searchdomains 是什么&lt;/h3&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;Name Servers（DNS 服务器）

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Git | Dorianyang 的妙妙文档</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://dorianyang.com/zh/tags/git/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.870ec7a738304234433d49dc79f1ec1321b5a5537afaca6d257283b72972b738.css" integrity="sha256-hw7HpzgwQjRDPUncefHsEyG1pVN6&#43;sptJXKDtylytzg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://dorianyang.com/static/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dorianyang.com/static/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dorianyang.com/static/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://dorianyang.com/static/apple-touch-icon.png">
+<link rel="mask-icon" href="https://dorianyang.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://dorianyang.com/zh/tags/git/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="https://dorianyang.com/zh/tags/git/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CR1332THT7');
+        }
+      </script><meta property="og:url" content="https://dorianyang.com/zh/tags/git/">
+  <meta property="og:site_name" content="Dorianyang 的妙妙文档">
+  <meta property="og:title" content="Git">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git">
+<meta name="twitter:description" content="">
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CR1332THT7');
+    </script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://dorianyang.com/zh/" accesskey="h" title="Ch1ldKing (Alt + H)">
+                <img src="https://dorianyang.com/static/apple-touch-icon.png" alt="" aria-label="logo"
+                    height="35">Ch1ldKing</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                    <ul class="lang-switch"><li>|</li>
+                        <li>
+                            <a href="https://dorianyang.com/en/" title="English"
+                                aria-label="English">En</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://dorianyang.com/zh/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dorianyang.com/zh/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dorianyang.com/zh/tags/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dorianyang.com/zh/archives/" title="时间线">
+                    <span>时间线</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Git
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">在一个 Git 仓库中聚合两个项目
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>主要操作 现在我们有两个仓库，servicecomp 和 srvc-frontend，我想把他们在一个仓库中聚合一下（比如前后端项目），使用 subtree
+# 0) 若父仓库已误把两个子仓库当普通目录 add 了，先从索引移除（不删本地文件） git rm --cached -r servicecomp srvc-frontend || true # 1) 临时挪开本地已有目录（subtree 会自己创建对应目录） mv servicecomp servicecomp.tmp mv srvc-frontend srvc-frontend.tmp 两个子项目的远端 URL 加进来，起两个新名字
+# 2) 后端 servicecomp git remote add servicecomp-origin git@github.com:Ch1ldKing/HITCS-CloudNative-SpringCloud.git git fetch servicecomp-origin git subtree add --prefix=servicecomp servicecomp-origin main -m &#34;Add servicecomp via subtree&#34; # 暂存更改 git stash push -u -m &#34;wip before adding srvc-frontend&#34; # 3) 前端 srvc-frontend（URL 和分支名请替换） git remote add srvc-frontend-origin &lt;你的前端仓库URL&gt; git fetch srvc-frontend-origin git subtree add --prefix=srvc-frontend srvc-frontend-origin &lt;分支名&gt; -m &#34;Add srvc-frontend via subtree&#34; # 改动取回来 git stash pop 错误 错误 1 $ git subtree add --prefix=servicecomp servicecomp-origin main -m &#34;Add servicecomp via subtree&#34; fatal: ambiguous argument &#39;HEAD&#39;: unknown revision or path not in the working tree. Use &#39;--&#39; to separate paths from revisions, like this: &#39;git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]&#39; fatal: working tree has modifications. Cannot add. fatal: ambiguous argument ‘HEAD’
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-15 14:22:14 +0800 CST'>2025年10月15日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>201 字</span>&nbsp;·&nbsp;<span>Dorianyang</span></footer>
+  <a class="entry-link" aria-label="post link to 在一个 Git 仓库中聚合两个项目" href="https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://dorianyang.com/zh/">Dorianyang 的妙妙文档</a></span> · 
+
+    <span>
+        <a href="https://icp.gov.moe/?keyword=20256818" target="_blank">萌ICP备20256818号</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

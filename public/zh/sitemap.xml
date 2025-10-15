@@ -2,110 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/zh/tags/css/</loc>
-    <lastmod>2025-10-15T02:20:15+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/zh/</loc>
-    <lastmod>2025-10-15T02:20:15+08:00</lastmod>
+    <loc>https://dorianyang.com/zh/</loc>
+    <lastmod>2025-10-15T17:56:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://dorianyang.com/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/"
+                href="https://dorianyang.com/zh/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/posts/</loc>
-    <lastmod>2025-10-15T02:20:15+08:00</lastmod>
+    <loc>https://dorianyang.com/zh/posts/</loc>
+    <lastmod>2025-10-15T17:56:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/problem/</loc>
-    <lastmod>2025-10-15T02:20:15+08:00</lastmod>
+    <loc>https://dorianyang.com/zh/tags/react/</loc>
+    <lastmod>2025-10-15T17:56:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2025-10-15T02:20:15+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/zh/tags/</loc>
-    <lastmod>2025-10-15T02:20:15+08:00</lastmod>
+    <loc>https://dorianyang.com/zh/tags/</loc>
+    <lastmod>2025-10-15T17:56:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://dorianyang.com/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
+                href="https://dorianyang.com/zh/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/vue/</loc>
-    <lastmod>2025-10-15T02:20:15+08:00</lastmod>
+    <loc>https://dorianyang.com/zh/tags/vite/</loc>
+    <lastmod>2025-10-15T17:56:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/maple/</loc>
+    <loc>https://dorianyang.com/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2025-10-15T17:56:10+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/git/</loc>
+    <lastmod>2025-10-15T14:22:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2025-10-15T14:22:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/cicd/</loc>
+    <lastmod>2025-10-15T04:10:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/kubernetes/</loc>
+    <lastmod>2025-10-15T04:10:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/nacos/</loc>
+    <lastmod>2025-10-15T04:10:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/problem/</loc>
+    <lastmod>2025-10-15T04:10:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/ubuntu/</loc>
+    <lastmod>2025-10-15T04:10:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</loc>
+    <lastmod>2025-10-15T04:10:14+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/css/</loc>
+    <lastmod>2025-07-16T02:20:15+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2025-07-16T02:20:15+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/vue/</loc>
+    <lastmod>2025-07-16T02:20:15+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/hit-project/</loc>
+    <lastmod>2025-06-20T18:02:27+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2025-06-20T18:02:27+08:00</lastmod>
+  </url><url>
+    <loc>https://dorianyang.com/zh/tags/maple/</loc>
     <lastmod>2025-05-09T03:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</loc>
+    <loc>https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</loc>
     <lastmod>2025-05-09T03:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/vscode/</loc>
+    <loc>https://dorianyang.com/zh/tags/vscode/</loc>
     <lastmod>2025-05-09T03:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/go/</loc>
+    <loc>https://dorianyang.com/zh/tags/go/</loc>
     <lastmod>2024-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/grpc/</loc>
+    <loc>https://dorianyang.com/zh/tags/grpc/</loc>
     <lastmod>2024-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</loc>
+    <loc>https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</loc>
     <lastmod>2024-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2024-08-21T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/json/</loc>
+    <loc>https://dorianyang.com/zh/tags/json/</loc>
     <lastmod>2024-08-21T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/tags/pandas/</loc>
+    <loc>https://dorianyang.com/zh/tags/pandas/</loc>
     <lastmod>2024-08-21T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/about/</loc>
+    <loc>https://dorianyang.com/zh/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/zh/archives/</loc>
+    <loc>https://dorianyang.com/zh/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/archives/"
+                href="https://dorianyang.com/en/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/archives/"
+                href="https://dorianyang.com/zh/archives/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/categories/</loc>
+    <loc>https://dorianyang.com/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://dorianyang.com/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/categories/"
+                href="https://dorianyang.com/zh/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/search/</loc>
+    <loc>https://dorianyang.com/zh/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/search/"
+                href="https://dorianyang.com/en/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/search/"
+                href="https://dorianyang.com/zh/search/"
                 />
   </url>
 </urlset>
