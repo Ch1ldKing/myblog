@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/哈工大云原生实验总结.md",
+                "file": "content/zh/about.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "哈工大云原生实验总结"
+              "title": "about"
             }
           }
         ]
@@ -183,9 +183,9 @@
   },
   "active": "1cee3c437083186e",
   "lastOpenFiles": [
-    "content/zh/posts/Ubuntu 安装 K8s 所有的坑.md",
-    "content/zh/posts/哈工大云原生实验总结.md",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
+    "content/zh/posts/哈工大云原生实验总结.md",
+    "content/zh/posts/Ubuntu 安装 K8s 所有的坑.md",
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
     "content/zh/posts/gRPC 默认值问题（null 默认为 0）.md",
     "content/zh/posts/Dataframe NaN 值遇到 json 的问题.md",

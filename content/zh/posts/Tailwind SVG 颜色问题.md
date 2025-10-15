@@ -1,7 +1,7 @@
 ---
 title: SVG 颜色问题
-date: 2025-10-15T02:20:15+08:00
-lastmod: 2025-10-15T02:20:15+08:00
+date: 2025-07-16T02:20:15+08:00
+lastmod: 2025-07-16T02:20:15+08:00
 draft: false
 tags:
   - problem
