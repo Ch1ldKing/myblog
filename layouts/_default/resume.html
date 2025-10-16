@@ -1,0 +1,196 @@
+{{- define "main" }}
+
+<article class="resume-single">
+  <header class="resume-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="resume-title">
+      {{ .Title }}
+    </h1>
+    {{- if .Description }}
+    <div class="resume-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+  </header>
+
+  {{- if .Content }}
+  <div class="resume-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="resume-footer">
+    {{- if .Params.lastmod }}
+    <div class="resume-lastmod">
+      <em>最后更新: {{ .Params.lastmod | time.Format ":date_long" }}</em>
+    </div>
+    {{- end }}
+  </footer>
+</article>
+
+<style>
+.resume-single {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resume-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.resume-description {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-top: 0.5rem;
+}
+
+.resume-content {
+  line-height: 1.8;
+}
+
+.resume-content h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.resume-content h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.resume-content h4 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.resume-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.resume-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.resume-content strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.resume-content p {
+  margin-bottom: 1rem;
+}
+
+.resume-content blockquote {
+  border-left: 3px solid var(--primary);
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.resume-content code {
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.resume-content a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary);
+}
+
+.resume-content a:hover {
+  border-bottom: 1px solid var(--primary);
+}
+
+/* 技能标签样式 */
+.resume-content .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resume-content .skill-tag {
+  background: var(--code-bg);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+}
+
+.resume-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  .resume-single {
+    padding: 10px;
+  }
+  
+  .resume-title {
+    font-size: 2rem;
+  }
+  
+  .resume-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .resume-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .resume-single {
+    max-width: 100%;
+  }
+  
+  .resume-header {
+    border-bottom: 2px solid #000;
+  }
+  
+  .resume-content h2 {
+    border-bottom: 1px solid #000;
+  }
+  
+  .resume-content a {
+    color: #000;
+    border-bottom: none;
+    text-decoration: underline;
+  }
+}
+</style>
+
+{{- end }}{{/* end main */}}

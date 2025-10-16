@@ -183,6 +183,7 @@
   },
   "active": "24c954ba07397a6f",
   "lastOpenFiles": [
+    "layouts/_default/resume.html",
     "content/zh/resume.md",
     "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
     "content/zh/posts/React 开发日志.md",
