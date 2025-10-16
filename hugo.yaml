@@ -74,6 +74,7 @@ languages:
         - identifier: resume
           name: 简历
           url: /zh/resume/
+          weight: 25
     params:
       ShowCodeCopyButtons: true
       UseHugoToc: true

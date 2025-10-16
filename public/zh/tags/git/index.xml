@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Git on Dorianyang 的妙妙文档</title>
-    <link>https://dorianyang.com/zh/tags/git/</link>
+    <link>http://localhost:1313/zh/tags/git/</link>
     <description>Recent content in Git on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 15 Oct 2025 14:22:14 +0800</lastBuildDate>
-    <atom:link href="https://dorianyang.com/zh/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在一个 Git 仓库中聚合两个项目</title>
-      <link>https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</link>
+      <link>http://localhost:1313/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Wed, 15 Oct 2025 14:22:14 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>http://localhost:1313/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</guid>
       <description>&lt;h2 id=&#34;主要操作&#34;&gt;主要操作&lt;/h2&gt;
 &lt;p&gt;现在我们有两个仓库，servicecomp 和 srvc-frontend，我想把他们在一个仓库中聚合一下（比如前后端项目），使用 subtree&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 0) 若父仓库已误把两个子仓库当普通目录 add 了，先从索引移除（不删本地文件）&lt;/span&gt;

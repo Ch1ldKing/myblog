@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>SVG 颜色问题 | Dorianyang 的妙妙文档</title>
 <meta name="keywords" content="problem, vue, css">
 <meta name="description" content="我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=&ldquo;currentColor&rdquo;，然后就可以在
@@ -25,16 +25,16 @@
 &lt;/div&gt;
 还可以直接指定颜色">
 <meta name="author" content="Dorianyang">
-<link rel="canonical" href="https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.870ec7a738304234433d49dc79f1ec1321b5a5537afaca6d257283b72972b738.css" integrity="sha256-hw7HpzgwQjRDPUncefHsEyG1pVN6&#43;sptJXKDtylytzg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://dorianyang.com/static/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dorianyang.com/static/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dorianyang.com/static/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://dorianyang.com/static/apple-touch-icon.png">
-<link rel="mask-icon" href="https://dorianyang.com/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/static/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/static/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/static/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/static/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,107 +72,6 @@
 
     </style>
 </noscript>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-CR1332THT7');
-        }
-      </script><meta property="og:url" content="https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/">
-  <meta property="og:site_name" content="Dorianyang 的妙妙文档">
-  <meta property="og:title" content="SVG 颜色问题">
-  <meta property="og:description" content="我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=“currentColor”，然后就可以在
-&lt;template&gt; &lt;svg t=&#34;1749727002733&#34; class=&#34;icon&#34; viewBox=&#34;0 0 1394 1024&#34; version=&#34;1.1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; p-id=&#34;5650&#34; width=&#34;200&#34; height=&#34;200&#34;&gt; &lt;path d=&#34;M808.665066 968.123525a139.174837 139.174837 0 0 1-222.989114 0L28.061551 224.448838A140.525626 140.525626 0 0 1 0 140.133462C0 62.746326 62.484883 0 139.567002 0h1115.228801c30.283817 0 59.739731 9.891261 83.944998 28.192273 61.569833 46.558646 73.901229 134.425289 27.538666 196.256565L808.665066 968.123525z&#34; fill=&#34;currentColor&#34; p-id=&#34;5651&#34;&gt;&lt;/path&gt; &lt;/svg&gt; &lt;/template&gt; 然后在 vue 中使用，可以跟随父组件
-&lt;div :class=&#34;[ &#39;flex items-center px-2 py-1 rounded-full text-xs font-medium min-w-[70px] justify-center&#39;, category.change &gt; 0 ? &#39;bg-red-100 text-red-800&#39; : &#39;bg-green-100 text-green-800&#39;]&#34;&gt; &lt;IconArrowDown :class=&#34;[&#39;w-3 h-3 mr-1&#39;, category.change &gt; 0 ? &#39;rotate-180&#39; : &#39;&#39;]&#34; /&gt; {{ Math.abs(category.change).toFixed(2) }}% &lt;/div&gt; 还可以直接指定颜色">
-  <meta property="og:locale" content="zh">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-07-16T02:20:15+08:00">
-    <meta property="article:modified_time" content="2025-07-16T02:20:15+08:00">
-    <meta property="article:tag" content="Problem">
-    <meta property="article:tag" content="Vue">
-    <meta property="article:tag" content="Css">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SVG 颜色问题">
-<meta name="twitter:description" content="我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=&ldquo;currentColor&rdquo;，然后就可以在
-&lt;template&gt;
-    &lt;svg t=&#34;1749727002733&#34; class=&#34;icon&#34; viewBox=&#34;0 0 1394 1024&#34; version=&#34;1.1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;
-        p-id=&#34;5650&#34; width=&#34;200&#34; height=&#34;200&#34;&gt;
-        &lt;path
-            d=&#34;M808.665066 968.123525a139.174837 139.174837 0 0 1-222.989114 0L28.061551 224.448838A140.525626 140.525626 0 0 1 0 140.133462C0 62.746326 62.484883 0 139.567002 0h1115.228801c30.283817 0 59.739731 9.891261 83.944998 28.192273 61.569833 46.558646 73.901229 134.425289 27.538666 196.256565L808.665066 968.123525z&#34;
-            fill=&#34;currentColor&#34; p-id=&#34;5651&#34;&gt;&lt;/path&gt;
-    &lt;/svg&gt;
-&lt;/template&gt;
-然后在 vue 中使用，可以跟随父组件
-&lt;div :class=&#34;[
-	&#39;flex items-center px-2 py-1 rounded-full text-xs font-medium min-w-[70px] justify-center&#39;,
-	category.change &gt; 0 ? &#39;bg-red-100 text-red-800&#39; : &#39;bg-green-100 text-green-800&#39;]&#34;&gt;
-	&lt;IconArrowDown :class=&#34;[&#39;w-3 h-3 mr-1&#39;, category.change &gt; 0 ? &#39;rotate-180&#39; : &#39;&#39;]&#34; /&gt;
-	{{ Math.abs(category.change).toFixed(2) }}%
-&lt;/div&gt;
-还可以直接指定颜色">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://dorianyang.com/zh/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "SVG 颜色问题",
-      "item": "https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "SVG 颜色问题",
-  "name": "SVG 颜色问题",
-  "description": "我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=\u0026ldquo;currentColor\u0026rdquo;，然后就可以在\n\u0026lt;template\u0026gt; \u0026lt;svg t=\u0026#34;1749727002733\u0026#34; class=\u0026#34;icon\u0026#34; viewBox=\u0026#34;0 0 1394 1024\u0026#34; version=\u0026#34;1.1\u0026#34; xmlns=\u0026#34;http://www.w3.org/2000/svg\u0026#34; p-id=\u0026#34;5650\u0026#34; width=\u0026#34;200\u0026#34; height=\u0026#34;200\u0026#34;\u0026gt; \u0026lt;path d=\u0026#34;M808.665066 968.123525a139.174837 139.174837 0 0 1-222.989114 0L28.061551 224.448838A140.525626 140.525626 0 0 1 0 140.133462C0 62.746326 62.484883 0 139.567002 0h1115.228801c30.283817 0 59.739731 9.891261 83.944998 28.192273 61.569833 46.558646 73.901229 134.425289 27.538666 196.256565L808.665066 968.123525z\u0026#34; fill=\u0026#34;currentColor\u0026#34; p-id=\u0026#34;5651\u0026#34;\u0026gt;\u0026lt;/path\u0026gt; \u0026lt;/svg\u0026gt; \u0026lt;/template\u0026gt; 然后在 vue 中使用，可以跟随父组件\n\u0026lt;div :class=\u0026#34;[ \u0026#39;flex items-center px-2 py-1 rounded-full text-xs font-medium min-w-[70px] justify-center\u0026#39;, category.change \u0026gt; 0 ? \u0026#39;bg-red-100 text-red-800\u0026#39; : \u0026#39;bg-green-100 text-green-800\u0026#39;]\u0026#34;\u0026gt; \u0026lt;IconArrowDown :class=\u0026#34;[\u0026#39;w-3 h-3 mr-1\u0026#39;, category.change \u0026gt; 0 ? \u0026#39;rotate-180\u0026#39; : \u0026#39;\u0026#39;]\u0026#34; /\u0026gt; {{ Math.abs(category.change).toFixed(2) }}% \u0026lt;/div\u0026gt; 还可以直接指定颜色\n",
-  "keywords": [
-    "problem", "vue", "css"
-  ],
-  "articleBody": "我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=“currentColor”，然后就可以在\n\u003ctemplate\u003e \u003csvg t=\"1749727002733\" class=\"icon\" viewBox=\"0 0 1394 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" p-id=\"5650\" width=\"200\" height=\"200\"\u003e \u003cpath d=\"M808.665066 968.123525a139.174837 139.174837 0 0 1-222.989114 0L28.061551 224.448838A140.525626 140.525626 0 0 1 0 140.133462C0 62.746326 62.484883 0 139.567002 0h1115.228801c30.283817 0 59.739731 9.891261 83.944998 28.192273 61.569833 46.558646 73.901229 134.425289 27.538666 196.256565L808.665066 968.123525z\" fill=\"currentColor\" p-id=\"5651\"\u003e\u003c/path\u003e \u003c/svg\u003e \u003c/template\u003e 然后在 vue 中使用，可以跟随父组件\n\u003cdiv :class=\"[ 'flex items-center px-2 py-1 rounded-full text-xs font-medium min-w-[70px] justify-center', category.change \u003e 0 ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800']\"\u003e \u003cIconArrowDown :class=\"['w-3 h-3 mr-1', category.change \u003e 0 ? 'rotate-180' : '']\" /\u003e {{ Math.abs(category.change).toFixed(2) }}% \u003c/div\u003e 还可以直接指定颜色\n\u003cdiv class=\"flex items-center\"\u003e \u003cRobotIcon class=\"text-blue-800 w-8 h-8 flex mr-2\" /\u003e \u003ch2 class=\"text-xl font-bold text-gray-800\"\u003eAI\u003c/h2\u003e \u003c/div\u003e ",
-  "wordCount" : "112",
-  "inLanguage": "zh",
-  "datePublished": "2025-07-16T02:20:15+08:00",
-  "dateModified": "2025-07-16T02:20:15+08:00",
-  "author":{
-    "@type": "Person",
-    "name": "Dorianyang"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Dorianyang 的妙妙文档",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://dorianyang.com/static/favicon.ico"
-    }
-  }
-}
-</script>
 
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR1332THT7"></script>
@@ -200,8 +99,8 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://dorianyang.com/zh/" accesskey="h" title="Ch1ldKing (Alt + H)">
-                <img src="https://dorianyang.com/static/apple-touch-icon.png" alt="" aria-label="logo"
+            <a href="http://localhost:1313/zh/" accesskey="h" title="Ch1ldKing (Alt + H)">
+                <img src="http://localhost:1313/static/apple-touch-icon.png" alt="" aria-label="logo"
                     height="35">Ch1ldKing</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -226,7 +125,7 @@
                 </button>
                     <ul class="lang-switch"><li>|</li>
                         <li>
-                            <a href="https://dorianyang.com/en/" title="English"
+                            <a href="http://localhost:1313/en/" title="English"
                                 aria-label="English">En</a>
                         </li>
                     </ul>
@@ -234,22 +133,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://dorianyang.com/zh/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/zh/search/" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
                 </a>
             </li>
             <li>
-                <a href="https://dorianyang.com/zh/about/" title="关于">
+                <a href="http://localhost:1313/zh/about/" title="关于">
                     <span>关于</span>
                 </a>
             </li>
             <li>
-                <a href="https://dorianyang.com/zh/tags/" title="分类">
+                <a href="http://localhost:1313/zh/resume/" title="简历">
+                    <span>简历</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/zh/tags/" title="分类">
                     <span>分类</span>
                 </a>
             </li>
             <li>
-                <a href="https://dorianyang.com/zh/archives/" title="时间线">
+                <a href="http://localhost:1313/zh/archives/" title="时间线">
                     <span>时间线</span>
                 </a>
             </li>
@@ -260,7 +164,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://dorianyang.com/zh/">主页</a>&nbsp;»&nbsp;<a href="https://dorianyang.com/zh/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/zh/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/zh/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       SVG 颜色问题
     </h1>
@@ -296,17 +200,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://dorianyang.com/zh/tags/problem/">Problem</a></li>
-      <li><a href="https://dorianyang.com/zh/tags/vue/">Vue</a></li>
-      <li><a href="https://dorianyang.com/zh/tags/css/">Css</a></li>
+      <li><a href="http://localhost:1313/zh/tags/problem/">Problem</a></li>
+      <li><a href="http://localhost:1313/zh/tags/vue/">Vue</a></li>
+      <li><a href="http://localhost:1313/zh/tags/css/">Css</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/">
+  <a class="prev" href="http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/">
     <span class="title">« 上一页</span>
     <br>
     <span>Ubuntu 安装 K8s 所有的坑</span>
   </a>
-  <a class="next" href="https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/">
+  <a class="next" href="http://localhost:1313/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/">
     <span class="title">下一页 »</span>
     <br>
     <span>哈工大云原生实验总结</span>
@@ -325,7 +229,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://dorianyang.com/zh/">Dorianyang 的妙妙文档</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/zh/">Dorianyang 的妙妙文档</a></span> · 
 
     <span>
         <a href="https://icp.gov.moe/?keyword=20256818" target="_blank">萌ICP备20256818号</a>

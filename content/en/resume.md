@@ -6,6 +6,7 @@ description: "Dorian 的个人简历 - 软件工程师"
 searchHidden: true
 comments: false
 lastmod: 2025-10-16
+draft: true
 ---
 
 ## 👤 基本信息
@@ -83,24 +84,9 @@ lastmod: 2025-10-16
 
 ## 🚀 项目经历
 
-### AI 相关项目
-**个人项目** | 2024 - 至今
-- 开发多个小型 AI 应用
-- 探索机器学习在实际场景中的应用
-- 技术栈: Python, PyTorch/TensorFlow
 
-### 个人博客网站
-**个人项目** | [时间]
-- 使用 Hugo + PaperMod 主题搭建个人技术博客
-- 记录技术学习笔记与问题解决方案
-- 部署在 Cloudflare Pages
-- [博客地址]
 
-### 云原生实验项目 (HIT)
-**课程项目** | [时间]
-- 在 Ubuntu 环境下搭建 Kubernetes 集群
-- 实现容器化应用的部署与管理
-- 深入理解云原生架构设计
+www.adbiza.com
 
 ---
 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vscode on Dorianyang 的妙妙文档</title>
-    <link>https://dorianyang.com/zh/tags/vscode/</link>
+    <link>http://localhost:1313/zh/tags/vscode/</link>
     <description>Recent content in Vscode on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 09 May 2025 03:34:35 +0800</lastBuildDate>
-    <atom:link href="https://dorianyang.com/zh/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Maple-Theme 配合 Maple-font</title>
-      <link>https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</link>
+      <link>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</link>
       <pubDate>Fri, 09 May 2025 03:34:35 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</guid>
+      <guid>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</guid>
       <description>&lt;p&gt;在 VSCode 安装了 Maple 主题之后，我们可能会遇到一些字体不生效，或者[TODO]标签没法主阿们渲染的情况，就需要修改系统中 &lt;code&gt;.vscode/extensions/subframe7536.theme-maple-0.7.16/themes/maple-dark-color-theme.json&lt;/code&gt;，改为以下内容（同样适用于 kiro,cursor 等）&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Maple Dark&amp;#34;&lt;/span&gt;,

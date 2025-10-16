@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MacOS on Dorianyang 的妙妙文档</title>
+    <link>http://localhost:1313/zh/tags/macos/</link>
+    <description>Recent content in MacOS on Dorianyang 的妙妙文档</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 16 Oct 2025 03:19:13 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XXX 已损坏，你应该拖到废纸篓中</title>
+      <link>http://localhost:1313/zh/posts/xxx-%E5%B7%B2%E6%8D%9F%E5%9D%8F%E4%BD%A0%E5%BA%94%E8%AF%A5%E6%8B%96%E5%88%B0%E5%BA%9F%E7%BA%B8%E7%AF%93%E4%B8%AD/</link>
+      <pubDate>Thu, 16 Oct 2025 03:19:13 +0800</pubDate>
+      <guid>http://localhost:1313/zh/posts/xxx-%E5%B7%B2%E6%8D%9F%E5%9D%8F%E4%BD%A0%E5%BA%94%E8%AF%A5%E6%8B%96%E5%88%B0%E5%BA%9F%E7%BA%B8%E7%AF%93%E4%B8%AD/</guid>
+      <description>&lt;p&gt;这是由于 MacOS 不允许不信任的应用
+打开终端，输入（先别运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo xattr -d com.apple.quarantine 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后打开你的 FInder -&amp;gt; 应用程序，将有问题的 APP 拖进终端，然后大概是这种效果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo xattr -d com.apple.quarantine /Applications/PicGo.app
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这时候再运行，就能打开了。真打不开的就是你版本没下载对或者程序真的有问题&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

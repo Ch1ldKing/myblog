@@ -2,64 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dorianyang.com/en/archives/</loc>
+    <loc>http://localhost:1313/en/</loc>
+    <lastmod>2025-10-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://dorianyang.com/zh/archives/"
+                href="http://localhost:1313/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dorianyang.com/en/archives/"
+                href="http://localhost:1313/en/"
                 />
   </url><url>
-    <loc>https://dorianyang.com/en/categories/</loc>
+    <loc>http://localhost:1313/en/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://dorianyang.com/zh/categories/"
+                href="http://localhost:1313/zh/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dorianyang.com/en/categories/"
+                href="http://localhost:1313/en/archives/"
                 />
   </url><url>
-    <loc>https://dorianyang.com/en/</loc>
+    <loc>http://localhost:1313/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://dorianyang.com/zh/"
+                href="http://localhost:1313/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dorianyang.com/en/"
+                href="http://localhost:1313/en/categories/"
                 />
   </url><url>
-    <loc>https://dorianyang.com/en/tags/</loc>
+    <loc>http://localhost:1313/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://dorianyang.com/zh/tags/"
+                href="http://localhost:1313/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dorianyang.com/en/tags/"
+                href="http://localhost:1313/en/tags/"
                 />
   </url><url>
-    <loc>https://dorianyang.com/en/search/</loc>
+    <loc>http://localhost:1313/en/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://dorianyang.com/zh/search/"
+                href="http://localhost:1313/zh/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://dorianyang.com/en/search/"
+                href="http://localhost:1313/en/search/"
                 />
   </url>
 </urlset>

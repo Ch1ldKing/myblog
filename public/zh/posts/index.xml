@@ -2,17 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Dorianyang 的妙妙文档</title>
-    <link>https://dorianyang.com/zh/posts/</link>
+    <link>http://localhost:1313/zh/posts/</link>
     <description>Recent content in Posts on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 15 Oct 2025 17:56:10 +0800</lastBuildDate>
-    <atom:link href="https://dorianyang.com/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Oct 2025 11:33:44 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iSelect-React 开发日志</title>
+      <link>http://localhost:1313/zh/posts/iselect-react-%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Thu, 16 Oct 2025 11:33:44 +0800</pubDate>
+      <guid>http://localhost:1313/zh/posts/iselect-react-%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</guid>
+      <description>&lt;h1 id=&#34;bug&#34;&gt;Bug&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;CleanShot 2025-10-16 at 11.35.04@2x.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/10/16/JpoxeUKqBz8IAlv.png&#34;&gt;
+为空时密码不正确&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>XXX 已损坏，你应该拖到废纸篓中</title>
+      <link>http://localhost:1313/zh/posts/xxx-%E5%B7%B2%E6%8D%9F%E5%9D%8F%E4%BD%A0%E5%BA%94%E8%AF%A5%E6%8B%96%E5%88%B0%E5%BA%9F%E7%BA%B8%E7%AF%93%E4%B8%AD/</link>
+      <pubDate>Thu, 16 Oct 2025 03:19:13 +0800</pubDate>
+      <guid>http://localhost:1313/zh/posts/xxx-%E5%B7%B2%E6%8D%9F%E5%9D%8F%E4%BD%A0%E5%BA%94%E8%AF%A5%E6%8B%96%E5%88%B0%E5%BA%9F%E7%BA%B8%E7%AF%93%E4%B8%AD/</guid>
+      <description>&lt;p&gt;这是由于 MacOS 不允许不信任的应用
+打开终端，输入（先别运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo xattr -d com.apple.quarantine 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后打开你的 FInder -&amp;gt; 应用程序，将有问题的 APP 拖进终端，然后大概是这种效果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo xattr -d com.apple.quarantine /Applications/PicGo.app
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这时候再运行，就能打开了。真打不开的就是你版本没下载对或者程序真的有问题&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>React报错 The requested module does not provide an export named &#39;Subtask&#39;</title>
+      <link>http://localhost:1313/zh/posts/react%E6%8A%A5%E9%94%99-the-requested-module-does-not-provide-an-export-named-subtask/</link>
+      <pubDate>Thu, 16 Oct 2025 03:00:23 +0800</pubDate>
+      <guid>http://localhost:1313/zh/posts/react%E6%8A%A5%E9%94%99-the-requested-module-does-not-provide-an-export-named-subtask/</guid>
+      <description>&lt;p&gt;format.ts:1 Uncaught SyntaxError: The requested module &amp;lsquo;/src/types/index.ts&amp;rsquo; does not provide an export named &amp;lsquo;Subtask&amp;rsquo; (at format.ts:1:10)&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;CleanShot 2025-10-16 at 03.25.35@2x.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/10/16/32w8e9TXmdv1SQj.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;添加 type 即可&lt;/p&gt;</description>
+    </item>
     <item>
       <title>搭建一个 Vite &#43; React 项目</title>
-      <link>https://dorianyang.com/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</link>
+      <link>http://localhost:1313/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Wed, 15 Oct 2025 17:56:10 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>http://localhost:1313/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</guid>
       <description>&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
 &lt;p&gt;首先你需要安装 node.js，mac 使用如下命令，windows  linux 请自查&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install node
@@ -57,9 +87,9 @@
     </item>
     <item>
       <title>在一个 Git 仓库中聚合两个项目</title>
-      <link>https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</link>
+      <link>http://localhost:1313/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Wed, 15 Oct 2025 14:22:14 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>http://localhost:1313/zh/posts/%E5%9C%A8%E4%B8%80%E4%B8%AA-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E8%81%9A%E5%90%88%E4%B8%A4%E4%B8%AA%E9%A1%B9%E7%9B%AE/</guid>
       <description>&lt;h2 id=&#34;主要操作&#34;&gt;主要操作&lt;/h2&gt;
 &lt;p&gt;现在我们有两个仓库，servicecomp 和 srvc-frontend，我想把他们在一个仓库中聚合一下（比如前后端项目），使用 subtree&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 0) 若父仓库已误把两个子仓库当普通目录 add 了，先从索引移除（不删本地文件）&lt;/span&gt;
@@ -98,9 +128,9 @@
     </item>
     <item>
       <title>Ubuntu 安装 K8s 所有的坑</title>
-      <link>https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</link>
+      <link>http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</link>
       <pubDate>Wed, 15 Oct 2025 04:10:14 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</guid>
+      <guid>http://localhost:1313/zh/posts/ubuntu-%E5%AE%89%E8%A3%85-k8s-%E6%89%80%E6%9C%89%E7%9A%84%E5%9D%91/</guid>
       <description>&lt;h3 id=&#34;在ubuntu-安装时手动配置-ipv4name-servers-和-searchdomains-是什么&#34;&gt;在ubuntu 安装时，手动配置 ipv4，name servers 和 searchdomains 是什么&lt;/h3&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;Name Servers（DNS 服务器）
@@ -133,9 +163,9 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
     </item>
     <item>
       <title>SVG 颜色问题</title>
-      <link>https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>
+      <link>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 16 Jul 2025 02:20:15 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://localhost:1313/zh/posts/tailwind-svg-%E9%A2%9C%E8%89%B2%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;我们使用 Tailwind 的情况下，想通过 class 直接给我们的 SVG 图标设置颜色，或者跟随父组件，需要用到这个 fill=&amp;ldquo;currentColor&amp;rdquo;，然后就可以在&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vue&#34; data-lang=&#34;vue&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;template&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;svg&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1749727002733&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;icon&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;viewBox&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0 0 1394 1024&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt;
@@ -156,9 +186,9 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
     </item>
     <item>
       <title>哈工大云原生实验总结</title>
-      <link>https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</link>
+      <link>http://localhost:1313/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sun, 15 Jun 2025 18:02:27 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</guid>
+      <guid>http://localhost:1313/zh/posts/%E5%93%88%E5%B7%A5%E5%A4%A7%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Ch1ldKing/HITCS-CloudNative&#34;&gt;Github 链接&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;作业要求&#34;&gt;作业要求：&lt;/h2&gt;
 &lt;ol&gt;
@@ -189,9 +219,9 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
     </item>
     <item>
       <title>Maple-Theme 配合 Maple-font</title>
-      <link>https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</link>
+      <link>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</link>
       <pubDate>Fri, 09 May 2025 03:34:35 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</guid>
+      <guid>http://localhost:1313/zh/posts/maple-theme-%E9%85%8D%E5%90%88-maple-font/</guid>
       <description>&lt;p&gt;在 VSCode 安装了 Maple 主题之后，我们可能会遇到一些字体不生效，或者[TODO]标签没法主阿们渲染的情况，就需要修改系统中 &lt;code&gt;.vscode/extensions/subframe7536.theme-maple-0.7.16/themes/maple-dark-color-theme.json&lt;/code&gt;，改为以下内容（同样适用于 kiro,cursor 等）&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Maple Dark&amp;#34;&lt;/span&gt;,
@@ -1951,18 +1981,18 @@ Kubernetes 更改了其软件包仓库（repository）的地址。旧的仓库�
     </item>
     <item>
       <title>gRPC 必须有默认值导致问题（null 默认为 0）</title>
-      <link>https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</link>
+      <link>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</link>
       <pubDate>Sun, 15 Sep 2024 11:30:03 +0000</pubDate>
-      <guid>https://dorianyang.com/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</guid>
+      <guid>http://localhost:1313/zh/posts/grpc-%E9%BB%98%E8%AE%A4%E5%80%BC%E9%97%AE%E9%A2%98null-%E9%BB%98%E8%AE%A4%E4%B8%BA-0/</guid>
       <description>&lt;p&gt;gRPC 任何类型必须有一个默认值，这就导致如果是 int 类型无法区分是数值 0 还是默认值 0.
 我的场景是在完成一个前端的 K 线分析，这就导致后端本来有些值返回的是 None（JSON 处理为 Null），引入 grpc 后变为 0，导致计算结果是错的
 所以设定一个特殊值，来解析为 null，返回给前端&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dataframe NaN 值遇到 json 的问题</title>
-      <link>https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <link>http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 21 Aug 2024 11:30:03 +0000</pubDate>
-      <guid>https://dorianyang.com/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://localhost:1313/zh/posts/dataframe-nan-%E5%80%BC%E9%81%87%E5%88%B0-json-%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;我的需求是把 df 的 NaN 转 None，方便后续 json 转 null
 看下面这段代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 计算 MA 指标&lt;/span&gt;

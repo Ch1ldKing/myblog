@@ -2,17 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>React on Dorianyang 的妙妙文档</title>
-    <link>https://dorianyang.com/zh/tags/react/</link>
+    <link>http://localhost:1313/zh/tags/react/</link>
     <description>Recent content in React on Dorianyang 的妙妙文档</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 15 Oct 2025 17:56:10 +0800</lastBuildDate>
-    <atom:link href="https://dorianyang.com/zh/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Oct 2025 03:00:23 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React报错 The requested module does not provide an export named &#39;Subtask&#39;</title>
+      <link>http://localhost:1313/zh/posts/react%E6%8A%A5%E9%94%99-the-requested-module-does-not-provide-an-export-named-subtask/</link>
+      <pubDate>Thu, 16 Oct 2025 03:00:23 +0800</pubDate>
+      <guid>http://localhost:1313/zh/posts/react%E6%8A%A5%E9%94%99-the-requested-module-does-not-provide-an-export-named-subtask/</guid>
+      <description>&lt;p&gt;format.ts:1 Uncaught SyntaxError: The requested module &amp;lsquo;/src/types/index.ts&amp;rsquo; does not provide an export named &amp;lsquo;Subtask&amp;rsquo; (at format.ts:1:10)&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;CleanShot 2025-10-16 at 03.25.35@2x.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/10/16/32w8e9TXmdv1SQj.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;添加 type 即可&lt;/p&gt;</description>
+    </item>
     <item>
       <title>搭建一个 Vite &#43; React 项目</title>
-      <link>https://dorianyang.com/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</link>
+      <link>http://localhost:1313/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Wed, 15 Oct 2025 17:56:10 +0800</pubDate>
-      <guid>https://dorianyang.com/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>http://localhost:1313/zh/posts/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-vite-&#43;-react-%E9%A1%B9%E7%9B%AE/</guid>
       <description>&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
 &lt;p&gt;首先你需要安装 node.js，mac 使用如下命令，windows  linux 请自查&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install node
