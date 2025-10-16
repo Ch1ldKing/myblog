@@ -1,5 +1,5 @@
 ---
-title: React 开发日志
+title: iSelect-React 开发日志
 date: 2025-10-16T11:33:44+08:00
 lastmod: 2025-10-16T11:33:44+08:00
 tags:
