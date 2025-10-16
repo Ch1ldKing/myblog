@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
+                "file": "content/zh/posts/React 开发日志.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React报错 The requested module does not provide an export named 'Subtask'"
+              "title": "React 开发日志"
             }
           }
         ]
@@ -166,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,11 +183,12 @@
   },
   "active": "24c954ba07397a6f",
   "lastOpenFiles": [
+    "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
+    "content/zh/posts/React 开发日志.md",
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
     "content/zh/posts/Ubuntu 安装 K8s 所有的坑.md",
     "static/img/CleanShot 2025-10-16 at 03.03.29@2x.png",
-    "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
     "img/CleanShot.md",
     "img",
     "content/zh/posts/搭建一个 Vite + React 项目.md",
