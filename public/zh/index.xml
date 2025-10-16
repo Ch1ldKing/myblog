@@ -15,7 +15,9 @@
       <guid>http://localhost:1313/zh/posts/iselect-react-%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/</guid>
       <description>&lt;h1 id=&#34;bug&#34;&gt;Bug&lt;/h1&gt;
 &lt;p&gt;&lt;img alt=&#34;CleanShot 2025-10-16 at 11.35.04@2x.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/10/16/JpoxeUKqBz8IAlv.png&#34;&gt;
-为空时密码不正确&lt;/p&gt;</description>
+为空时密码不正确&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;CleanShot 2025-10-16 at 14.51.50@2x.png&#34; loading=&#34;lazy&#34; src=&#34;https://s2.loli.net/2025/10/16/wSOqM8RFDH4p5ve.png&#34;&gt;
+改为显示 worker 名字，内存使用率位数改变一下&lt;/p&gt;</description>
     </item>
     <item>
       <title>XXX 已损坏，你应该拖到废纸篓中</title>
