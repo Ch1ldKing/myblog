@@ -6,16 +6,13 @@ description: "Dorian 的个人简历 - 软件工程师"
 searchHidden: true
 comments: false
 lastmod: 2025-10-16
-draft: true
 ---
 
 ## 👤 基本信息
 
 **姓名**: Dorian  
 **专业**: 软件工程  
-**学历**: 哈尔滨工业大学 (HIT) 本科 | 新加坡国立大学 (NUS) 硕士在读  
-**性格**: ENFJ  
-**联系方式**: [在此添加你的联系方式]
+**学历**: 哈尔滨工业大学 (HIT) 本科 (GPA )
 
 ---
 
