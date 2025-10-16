@@ -28,3 +28,4 @@ UseHugoToc: true
 ![CleanShot 2025-10-16 at 14.51.50@2x.png](https://s2.loli.net/2025/10/16/wSOqM8RFDH4p5ve.png)
 改为显示 worker 名字，内存使用率位数改变一下
 
+此外在线但不 available 的也需要写
