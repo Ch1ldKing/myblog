@@ -183,6 +183,7 @@
   },
   "active": "24c954ba07397a6f",
   "lastOpenFiles": [
+    "content/zh/resume.md",
     "content/zh/posts/React 遇到的一些知识.md",
     "content/zh/posts/iSelect-分布式机器学习计算系统半场香槟总结.md",
     "content/zh/posts/搭建一个 Vite + React 项目.md",
@@ -199,7 +200,6 @@
     "public/zh/tags/macos/index.xml",
     "public/zh/tags/macos",
     "public/img/CleanShot 2025-10-16 at 03.03.29@2x.png",
-    "content/zh/resume.md",
     "content/zh/posts/React报错 The requested module does not provide an export named 'Subtask'.md",
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
     "content/zh/posts/Tailwind SVG 颜色问题.md",
