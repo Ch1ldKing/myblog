@@ -71,6 +71,9 @@ languages:
           name: 时间线
           url: /zh/archives/
           weight: 40
+        - identifier: resume
+          name: 简历
+          url: /zh/resume/
     params:
       ShowCodeCopyButtons: true
       UseHugoToc: true
