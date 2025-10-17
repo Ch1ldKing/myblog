@@ -29,3 +29,5 @@ UseHugoToc: true
 改为显示 worker 名字，内存使用率位数改变一下
 
 此外在线但不 available 的也需要写
+
+worker-status 只能查看对于 client
