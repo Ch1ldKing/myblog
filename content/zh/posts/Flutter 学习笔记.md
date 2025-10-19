@@ -271,4 +271,5 @@ class MyHomePage extends StatelessWidget {
 1. 如同 MyApp（因为即使是完整的 App 也是一个组件，组件里面套组件），每个 widget 都要有一个 `build()`。当 widget的环境变化时，该方法自动调用，然后使 widget 的内容产生变化。有点像 Vue 开发中的生命周期`OnUpdated()`
 2. 在 build 中，通过`context.watch()`监控状态
 3. `build()`最终返回的是一个 Widget（更准确的说，嵌套的 Widget 树）。而顶层的 Widget 有一点区别，我们为其赋予一个具体的实现`Scaffold`（也是一种 Widget）
-4. 
+4. `Column`是一种 Widget 的布局，将 children 中的内容从上到下放在一列
+5. 
