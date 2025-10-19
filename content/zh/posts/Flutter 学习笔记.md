@@ -283,3 +283,32 @@ late final String asLowerCase = asString.toLowerCase();
 7. Here we use a lot trailing commas, it's a good idea, because most time it's not the last widget
 
 # 添加行为
+添加关于数据的操作，一定是在状态中添加
+```dart
+// ...
+
+class MyAppState extends ChangeNotifier {
+  var current = WordPair.random();
+
+  // ↓ Add this.
+  void getNext() {
+    current = WordPair.random();
+    notifyListeners();
+  }
+}
+
+// ...
+```
+有了对于数据的更新，我们只需要通过按钮回调即可
+```dart
+// ...
+
+    ElevatedButton(
+      onPressed: () {
+        appState.getNext();  // ← This instead of print().
+      },
+      child: Text('Next'),
+    ),
+
+// ...
+```
