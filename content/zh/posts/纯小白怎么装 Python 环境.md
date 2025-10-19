@@ -22,7 +22,7 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
 # 写在开头
-无论什么目的，我都建议你使用 uv 来安装 python。有很多人也会选择 conda，但我认为 uv 相对更好一些。如果有人给你发了一个 yaml，叫你复制这个环境，那一般是用 conda。后续会追加到该教程中。但是对于新项目，我建议你使用 uv
+无论什么目的，我都建议你使用 uv 来安装 python。有很多人也会选择 conda，但我认为 uv 相对更好一些。如果有人给你发了一个 yaml，叫你复制这个环境，那一般是用 conda。。但是对于新项目，我建议你使用 uv，不过它有一定学习成本，需要记忆命令
 
 # uv 安装 python教程
 1. 对于 mac，安装 homebrew
@@ -30,6 +30,7 @@ UseHugoToc: true
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 然后一路回车确认就行
+
 2. 等待 brew 安装好，我们运行`brew install uv`
 3. 等待 uv 安装好，我们进入我们的项目的路径的，然后运行 `uv init --name my-app . -p3.12`，3.12 替换为你自己需要的 python 版本,my-app 替换为你想要的项目名称
 4. 然后，你就成功得到了一个环境。以下是一些常用命令及与普通 python 命令映射
