@@ -197,3 +197,28 @@ void main() {
 // ...
 ```
 入口函数 `main()` 运行一个 App，这个 App 是 `MyApp()`
+```dart
+// ...
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'Namer App',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        ),
+        home: MyHomePage(),
+      ),
+    );
+  }
+}
+
+// ...
+```
+MyApp 是 StatelessWidget 类型的
