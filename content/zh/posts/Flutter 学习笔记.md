@@ -157,5 +157,6 @@ flutter run -d macos
 ```
 5. 这次成功了，弹出了我们的 APP![CleanShot 2025-10-19 at 17.11.25@2x.png](https://s2.loli.net/2025/10/19/1JLsQzyeaOZoxhb.png) 再试试 iOS 平台，右下角构建平台选择 ios simulator![CleanShot 2025-10-19 at 17.12.53.png](https://s2.loli.net/2025/10/19/B413el27UWdyhzA.png)再打开 `lib/main.dart` ，点击右上角运行标志，等待一会也可以正确显示![CleanShot 2025-10-19 at 17.16.05.png](https://s2.loli.net/2025/10/19/hFeAaRXHbQmIPv4.png)
 # 热重载
-1. 我们修改文字，并按   
+1. 我们修改文字，并按 ⌘+S，可看到程序中的文字发生了变化（注意 Web 平台不支持）
+# 添加一个按钮
 
