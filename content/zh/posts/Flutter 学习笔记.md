@@ -21,7 +21,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
-https://codelabs.developers.google.cn/codelabs/flutter-codelab-first?hl=zh-cn
+本笔记基于该[教程](https://codelabs.developers.google.cn/codelabs/flutter-codelab-first?hl=zh-cn)， 让我们说谢谢 Google
 
 # Flutter环境配置
 1. 按照 flutter
@@ -187,6 +187,7 @@ flutter run -d macos
 保存更改，可以看到出现了一个按钮，可以点击
 
 # 学习 lib/main.dart
+## 1. 程序入口
 ```dart
 // ...
 
@@ -197,6 +198,7 @@ void main() {
 // ...
 ```
 入口函数 `main()` 运行一个 App，这个 App 是 `MyApp()`
+## 2. MyApp 及创建
 ```dart
 // ...
 
@@ -221,7 +223,8 @@ class MyApp extends StatelessWidget {
 
 // ...
 ```
-MyApp 是 StatelessWidget 类型的。构建 Flutter 时，widget 是基本要素。
+MyApp 是 StatelessWidget 类型的（一种 Widget）。构建 Flutter 时，widget 是基本要素。这里定义了 MyApp 这个 widget 所有东西，有状态，名字，主题，主页
+## 3. 状态管理
 ```dart
 // ...
 
@@ -231,7 +234,41 @@ class MyAppState extends ChangeNotifier {
 
 // ...
 ```
-MyAppState 是我们这个应用的状态，一种管理状态的方法是`ChangeNotifier`。
-现在我们的状态只有一个变量，就是`current`，它是随机一个英文单词对
+1. MyAppState 是我们这个应用的状态，一种管理状态的方法是`ChangeNotifier`。
+   现在我们的状态只有一个变量，就是`current`，它是随机一个英文单词对
+2. `ChangeNotifier` ，一种状态类，意思是状态变化时通知 widget
+3. 怎么通知呢？使用`ChangeNotifierProvider`，提供给整个 App。这样所有的该 App 中的 Widget 都可以订阅这个状态
 
-`ChangeNotifier` 
+## 4. 组件 MyHomePage
+也是我们这个 App 的主页
+```dart
+// ...
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {           // ← 1
+    var appState = context.watch<MyAppState>();  // ← 2
+
+    return Scaffold(                             // ← 3
+      body: Column(                              // ← 4
+        children: [
+          Text('A random AWESOME idea:'),        // ← 5
+          Text(appState.current.asLowerCase),    // ← 6
+          ElevatedButton(
+            onPressed: () {
+              print('button pressed!');
+            },
+            child: Text('Next'),
+          ),
+        ],                                       // ← 7
+      ),
+    );
+  }
+}
+
+// ...
+```
+1. 如同 MyApp（因为即使是完整的 App 也是一个组件，组件里面套组件），每个 widget 都要有一个 `build()`。当 widget的环境变化时，该方法自动调用，然后使 widget 的内容产生变化。有点像 Vue 开发中的生命周期`OnUpdated()`
+2. 在 build 中，通过`context.watch()`监控状态
+3. `build()`最终返回的是一个 Widget（更准确的说，嵌套的 Widget 树）。而顶层的 Widget 有一点区别，我们为其赋予一个具体的实现`Scaffold`（也是一种 Widget）
+4. 
