@@ -274,4 +274,12 @@ class MyHomePage extends StatelessWidget {
 3. `build()`最终返回的是一个 Widget（更准确的说，嵌套的 Widget 树）。而顶层的 Widget 有一点区别，我们为其赋予一个具体的实现`Scaffold`（也是一种 Widget）
 4. `Column`是一种 Widget 的布局，将 children 中的内容从上到下放在一列
 5. `Text()`也是一种 widget
-6. 这个 Text 接受了状态中存储的内容，asLowerCase是 WordPair 的一个方法而已
+6. 这个 Text 接受了状态中存储的内容。我们打开 `current` 的定义 `WordPair.random()`，可以知道`random()`实际上返回了一个 WordPair类型。So `current` is also a `WordPair`. `WordPair` has key `asLowerCase`. It is the String of two string, then use function `toLowerCase()`, which comes from `String`
+```dart
+late final String asString = '$first$second';
+
+late final String asLowerCase = asString.toLowerCase();
+```
+7. Here we use a lot trailing commas, it's a good idea, because most time it's not the last widget
+
+# 添加行为
