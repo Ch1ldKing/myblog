@@ -22,6 +22,7 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
 本笔记基于该[教程](https://codelabs.developers.google.cn/codelabs/flutter-codelab-first?hl=zh-cn)， 让我们说谢谢 Google
+写着感觉和 ArkTS 和 Kotlin 很像
 
 # Flutter环境配置
 1. 按照 flutter
@@ -272,4 +273,5 @@ class MyHomePage extends StatelessWidget {
 2. 在 build 中，通过`context.watch()`监控状态
 3. `build()`最终返回的是一个 Widget（更准确的说，嵌套的 Widget 树）。而顶层的 Widget 有一点区别，我们为其赋予一个具体的实现`Scaffold`（也是一种 Widget）
 4. `Column`是一种 Widget 的布局，将 children 中的内容从上到下放在一列
-5. 
+5. `Text()`也是一种 widget
+6. 这个 Text 接受了状态中存储的内容，asLowerCase是 WordPair 的一个方法而已
