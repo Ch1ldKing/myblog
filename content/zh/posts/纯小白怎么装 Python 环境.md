@@ -3,7 +3,7 @@ title: 纯小白怎么装 Python 环境
 date: 2025-10-19T22:24:47+08:00
 lastmod: 2025-10-19T22:24:47+08:00
 tags:
-  - problem
+  - python
 author: Dorianyang
 draft: false
 showToc: true
