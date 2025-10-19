@@ -222,3 +222,16 @@ class MyApp extends StatelessWidget {
 // ...
 ```
 MyApp 是 StatelessWidget 类型的。构建 Flutter 时，widget 是基本要素。
+```dart
+// ...
+
+class MyAppState extends ChangeNotifier {
+  var current = WordPair.random();
+}
+
+// ...
+```
+MyAppState 是我们这个应用的状态，一种管理状态的方法是`ChangeNotifier`。
+现在我们的状态只有一个变量，就是`current`，它是随机一个英文单词对
+
+`ChangeNotifier` 
