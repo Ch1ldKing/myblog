@@ -221,4 +221,4 @@ class MyApp extends StatelessWidget {
 
 // ...
 ```
-MyApp 是 StatelessWidget 类型的
+MyApp 是 StatelessWidget 类型的。构建 Flutter 时，widget 是基本要素。
