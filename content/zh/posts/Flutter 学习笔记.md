@@ -155,7 +155,7 @@ flutter precache --macos
 # 6) 重新构建
 flutter run -d macos
 ```
-5. 这次成功了，弹出了我们的 APP![CleanShot 2025-10-19 at 17.11.25@2x.png](https://s2.loli.net/2025/10/19/1JLsQzyeaOZoxhb.png) 再试试 iOS 平台，右下角构建平台选择 ios simulator![CleanShot 2025-10-19 at 17.12.53.png](https://s2.loli.net/2025/10/19/B413el27UWdyhzA.png)再打开 `lib/main.dart` ，点击右上角运行标志
+5. 这次成功了，弹出了我们的 APP![CleanShot 2025-10-19 at 17.11.25@2x.png](https://s2.loli.net/2025/10/19/1JLsQzyeaOZoxhb.png) 再试试 iOS 平台，右下角构建平台选择 ios simulator![CleanShot 2025-10-19 at 17.12.53.png](https://s2.loli.net/2025/10/19/B413el27UWdyhzA.png)再打开 `lib/main.dart` ，点击右上角运行标志，等待一会也可以正确显示![CleanShot 2025-10-19 at 17.16.05.png](https://s2.loli.net/2025/10/19/hFeAaRXHbQmIPv4.png)
 6. 
 
 
