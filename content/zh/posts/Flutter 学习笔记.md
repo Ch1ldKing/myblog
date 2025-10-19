@@ -133,4 +133,29 @@ class MyHomePage extends StatelessWidget {
 2. 我这里选了 Mac，然后点击运行标志，结果报错了[在 stackoverflow 找到](https://stackoverflow.com/questions/40743713/command-line-tool-error-xcrun-error-unable-to-find-utility-xcodebuild-n)`xcrun: error: unable to find utility "xcodebuild", not a developer tool or in PATH`。如果装了 Xcode APP 版本，进入 Settings->Locations，改一下 command line tools 的路径![CleanShot 2025-10-19 at 16.46.36@2x.png](https://s2.loli.net/2025/10/19/sWfdBtDZ4RSKaXG.png)
 
 3. 再运行，还是报错![CleanShot 2025-10-19 at 16.50.10.png](https://s2.loli.net/2025/10/19/jv6ReXZqmJdzoxF.png) 运行 `flutter doctor -v`，发现没装 `cocoapods`。运行`brew install cocoapods`即可
-4. 
+4. 再运行，还是一样的报错。在[这里](https://stackoverflow.com/questions/52421999/xcode-10-command-codesign-failed-with-a-nonzero-exit-code)找到原因，有人就是因为被 iCloud 文件提供器加了 com.apple.fileprovider.fpfs#P 才一直失败，- 任何打包进 .app 的文件只要带有资源分叉或 Finder 信息，CodeSign 都会拒绝。所以我把项目移出了 iCloud 同步的文件夹，然后清理资源重新运行
+```zsh
+
+# 1) Flutter 清理 + 移除构建输出
+flutter clean
+rm -rf build/macos
+
+# 2) 删除 Xcode 派生数据
+rm -rf ~/Library/Developer/Xcode/DerivedData/*
+
+# 3) 递归清理整个项目树的扩展属性（包含将来要进 .app 的一切）
+xattr -rc .
+
+# 4) 若你从网上下过三方二进制/压缩包，顺便去掉隔离标记
+xattr -dr com.apple.quarantine .
+
+# 5) 重新预拉取 macOS 引擎构件（避免 SDK 自身产物带脏属性）
+flutter precache --macos
+
+# 6) 重新构建
+flutter run -d macos
+```
+5. 这次成功了，弹出了我们的 APP![CleanShot 2025-10-19 at 17.11.25@2x.png](https://s2.loli.net/2025/10/19/1JLsQzyeaOZoxhb.png) 再试试 iOS 平台，右下角构建平台选择 ios simulator![CleanShot 2025-10-19 at 17.12.53.png](https://s2.loli.net/2025/10/19/B413el27UWdyhzA.png)再打开 `lib/main.dart` ，点击右上角运行标志
+6. 
+
+
