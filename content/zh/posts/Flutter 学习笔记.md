@@ -312,3 +312,37 @@ class MyAppState extends ChangeNotifier {
 
 // ...
 ```
+
+# 修改外观
+首先，我们先修改一下主页对状态的读取，让职责更分离一些
+```dart
+// ...
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<MyAppState>();
+    var pair = appState.current;                 // ← Add this.
+
+    return Scaffold(
+      body: Column(
+        children: [
+          Text('A random AWESOME idea:'),
+          Text(pair.asLowerCase),                // ← Change to this.
+          ElevatedButton(
+            onPressed: () {
+              appState.getNext();
+            },
+            child: Text('Next'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ...
+```
+现在，为了能够使 Text 的外观更符合我们的要求，我们其实可以直接在 Text 中传入各种参数。但是这样可维护性很差。通常的做法是，把这个 Text() 提取为单独的 Widget，然后添加各种 UI 逻辑
+1. 右击需要重构的代码段（本例为 Text），或者光标放置在上面然后 ⌘+.  然后选择 Refactor ![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/9e18590d82a6900.gif?hl=zh-cn)
+2. 
