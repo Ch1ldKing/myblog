@@ -395,3 +395,28 @@ class MyApp extends StatelessWidget {
 
 `Colors`类提供了很多预设颜色，如果我们希望使用自己的 RGB 或 16 进制，使用``Color.fromRGBO(0, 255, 0, 1.0)` 或 `Color(0xFF00FF00)`
 ## 文本主题
+修改文本的颜色和大小，我们来修改 Text
+```dart
+// ...
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    // ↓ Add this.
+    final style = theme.textTheme.displayMedium!.copyWith(
+      color: theme.colorScheme.onPrimary,
+    );
+
+    return Card(
+      color: theme.colorScheme.primary,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        // ↓ Change this line.
+        child: Text(pair.asLowerCase, style: style),
+      ),
+    );
+  }
+
+// ...
+```
+
