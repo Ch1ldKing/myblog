@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/纯小白怎么装 Python 环境.md",
+                "file": "content/zh/posts/Flutter 学习笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "纯小白怎么装 Python 环境"
+              "title": "Flutter 学习笔记"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 278.5
   },
   "right": {
     "id": "ee15ea2b455a2d88",
@@ -167,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,8 +183,9 @@
   },
   "active": "24c954ba07397a6f",
   "lastOpenFiles": [
-    "content/zh/posts/Flutter 学习笔记.md",
     "content/zh/posts/纯小白怎么装 Python 环境.md",
+    "content/zh/posts/Untitled.md",
+    "content/zh/posts/Flutter 学习笔记.md",
     "content/zh/posts/XXX 已损坏，你应该拖到废纸篓中.md",
     "content/zh/about.md",
     "content/zh/archives.md",
@@ -220,7 +221,6 @@
     "content/zh/posts/first.md",
     "content/zh/posts/2025-10-15_02-18-20.md",
     "content/zh/posts/2025-10-15_02-17-23.md",
-    "content/zh/posts/2025-10-15_02-16-14.md",
     "public/favicon-32x32.png",
     "public/favicon-16x16.png",
     "public/apple-touch-icon.png",
