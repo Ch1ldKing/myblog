@@ -372,4 +372,26 @@ class MyHomePage extends StatelessWidget {
 3. theme 请求当前的主题，我们调用了其中`colorScheme`的主题色`primary`
 ## 配色方案
 如果想修改配色方案，我们来到总 App 中`MyApp`
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'Namer App',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),   // 在这里修改预设颜色
+        ),
+        home: MyHomePage(),
+      ),
+    );
+  }
+}
+```
+
+`Colors`类提供了很多预设颜色，如果我们希望使用自己的 RGB 或 16 进制，使用``Color.fromRGBO(0, 255, 0, 1.0)` 或 `Color(0xFF00FF00)`
+## 文本主题
