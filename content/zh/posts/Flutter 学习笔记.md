@@ -370,4 +370,6 @@ class MyHomePage extends StatelessWidget {
 // ...
 ```
 3. theme 请求当前的主题，我们调用了其中`colorScheme`的主题色`primary`
+## 配色方案
+如果想修改配色方案，我们来到总 App 中`MyApp`
 
