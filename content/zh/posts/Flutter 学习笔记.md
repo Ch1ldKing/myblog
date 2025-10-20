@@ -347,5 +347,7 @@ class MyHomePage extends StatelessWidget {
 1. 右击需要重构的代码段（本例为 Text），或者光标放置在上面然后 ⌘+.  然后选择 Extract Widget, 输入`BigCard` ![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/9e18590d82a6900.gif?hl=zh-cn)
 2. 可以看到新建了一个 BigCard 类。接下来，我们为其中的 Text 添加一个 Padding。放在 Text 上，同样的操作，但点击  Wrap with Padding
 3. 我们可以修改 Padding 的值，为该 BigCard 增加一些内边距
-4. 可以看到 Padding 其实也是一个 widget，并不是常规的"属性"或 CSS 值，
+4. 可以看到 Padding 其实也是一个 widget，并不是常规的"属性"或 CSS 值
+# 主题和样式
+1. 我们把 Padding 再包裹一下，
 
