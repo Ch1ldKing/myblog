@@ -349,5 +349,25 @@ class MyHomePage extends StatelessWidget {
 3. 我们可以修改 Padding 的值，为该 BigCard 增加一些内边距
 4. 可以看到 Padding 其实也是一个 widget，并不是常规的"属性"或 CSS 值
 # 主题和样式
-1. 我们把 Padding 再包裹一下，用 Card
+1. 我们把 Padding 再包裹一下，用 Card。`Card`是一种预设样式，这样会出现一个卡片样式
+2. 修改一下这个 Card 的样式，添加 theme，并使用 theme 的颜色。这样可以保持一致的配色方案
+```dart
+// ...
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);       // ← Add this.
+
+    return Card(
+      color: theme.colorScheme.primary,    // ← And also this.
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Text(pair.asLowerCase),
+      ),
+    );
+  }
+
+// ...
+```
+3. theme 请求当前的主题，我们调用了其中`colorScheme`的主题色`primary`
 
