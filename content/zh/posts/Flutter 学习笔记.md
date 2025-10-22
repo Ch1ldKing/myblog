@@ -494,4 +494,109 @@ class MyAppState extends ChangeNotifier {
 
 然后来到我们的主界面，添加一个新按钮。这需要添加一个`Row`，如果你了解前端开发，这会很容易理解
 我们在 Column 中添加`mainAxisAlignment`,意在使其子项不是集中在顶部，而是纵向的中间（毕竟 column 是列，列是纵向的）。选中我们的 Button，然后 ⌘+.，选择 Wrap with Row![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/7b9d0ea29e584308.gif?hl=zh-cn)
-然后
+然后，在肉中添加 mainAxisSize，但这次我们为了学习，先使用 MainAxisSize
+```dart
+// ...
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Hello Word'),
+            BigCard(pair: pair),
+            Row(
+              mainAxisSize: MainAxisSize.min, //<-- add this one
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    appState.getNext();
+                  },
+                  child: Text('Next'),
+                ),
+              ],
+// ...
+```
+这样做后并应用更改，你会发现一切都居中了。如果你好奇把 min 改为 max，会发现按钮们跑到最左侧
+
+然后我们需要将 state 中的函数应用起来，真正的将按钮关联到数据上。首先，在 Row 的子项添加一个按钮，并在`onPressed`属性中使用`toggleFavorite()`
+```dart
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Hello Word'),
+            BigCard(pair: pair),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    appState.toggleFavorite();
+                  },
+                  child: Text('Like'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    appState.getNext();
+                  },
+                  child: Text('Next'),
+                ),
+              ],
+            ),
+```
+保存后你应当能看到这个按钮了。然后再添加一个好看的图标。
+- 这个图标能够根据当前 WordPair 是否在 `favorites[]` 中来更改外观。
+-  此外，可以看到 ElevatedButton 支持一种 icon 方法，可以传入`icon`以显示
+- `Sizebox()`用于为 Column 添加间隔，也就是说，让两个纵向的东西之间有间隔（列之间的）
+```dart
+// ...
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<MyAppState>();
+    var pair = appState.current;
+
+    // ↓ Add this.
+    IconData icon;
+    if (appState.favorites.contains(pair)) {
+      icon = Icons.favorite;
+    } else {
+      icon = Icons.favorite_border;
+    }
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            BigCard(pair: pair),
+            SizedBox(height: 10),  //<-- and this.
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+
+                // ↓ And this.
+                ElevatedButton.icon(
+                  onPressed: () {
+                    appState.toggleFavorite();
+                  },
+                  icon: Icon(icon),
+                  label: Text('Like'),
+                ),
+                SizedBox(width: 10),
+
+                ElevatedButton(
+                  onPressed: () {
+                    appState.getNext();
+                  },
+                  child: Text('Next'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ...
+```
