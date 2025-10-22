@@ -459,5 +459,6 @@ class MyApp extends StatelessWidget {
 ```
 
 ### 进一步自定义文本主题
-将鼠标放在`copyWith()`的括号内任意处，按下 ⌘+⇧+Space，可以看到可以更改的属性列表
-对于`Card()`同样适用，按下后可以看到一个`elevation`，修改它的值以扩大`Card`的阴影
+- 将鼠标放在`copyWith()`的括号内任意处，按下 ⌘+⇧+Space，可以看到可以更改的属性列表
+- 对于`Card()`同样适用，按下后可以看到一个`elevation`，修改它的值以扩大`Card`的阴影![CleanShot 2025-10-22 at 21.40.43.gif](https://s2.loli.net/2025/10/22/cm59RWbPVywaY3S.gif)
+- 更改颜色属性，
