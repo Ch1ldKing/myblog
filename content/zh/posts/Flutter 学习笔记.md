@@ -23,7 +23,7 @@ UseHugoToc: true
 ---
 本笔记基于该[教程](https://codelabs.developers.google.cn/codelabs/flutter-codelab-first?hl=zh-cn)， 让我们说谢谢 Google
 写着感觉和 ArkTS 和 Kotlin 很像
-
+PS：如果你使用 Windows，请将所有 ⌘ （Mac 上的 Command 键）视为 Ctrl 键
 # Flutter环境配置
 1. 按照 flutter
 ```zsh
@@ -132,7 +132,6 @@ class MyHomePage extends StatelessWidget {
 1. 停留在 `main.dart` 上，选择当前的目标运行平台（右下角）
 ![CleanShot 2025-10-19 at 16.41.30.png](https://s2.loli.net/2025/10/19/k3ltjYmOIibRVKy.png)
 2. 我这里选了 Mac，然后点击运行标志，结果报错了[在 stackoverflow 找到](https://stackoverflow.com/questions/40743713/command-line-tool-error-xcrun-error-unable-to-find-utility-xcodebuild-n)`xcrun: error: unable to find utility "xcodebuild", not a developer tool or in PATH`。如果装了 Xcode APP 版本，进入 Settings->Locations，改一下 command line tools 的路径![CleanShot 2025-10-19 at 16.46.36@2x.png](https://s2.loli.net/2025/10/19/sWfdBtDZ4RSKaXG.png)
-
 3. 再运行，还是报错![CleanShot 2025-10-19 at 16.50.10.png](https://s2.loli.net/2025/10/19/jv6ReXZqmJdzoxF.png) 运行 `flutter doctor -v`，发现没装 `cocoapods`。运行`brew install cocoapods`即可
 4. 再运行，还是一样的报错。在[这里](https://stackoverflow.com/questions/52421999/xcode-10-command-codesign-failed-with-a-nonzero-exit-code)找到原因，有人就是因为被 iCloud 文件提供器加了 com.apple.fileprovider.fpfs#P 才一直失败，- 任何打包进 .app 的文件只要带有资源分叉或 Finder 信息，CodeSign 都会拒绝。所以我把项目移出了 iCloud 同步的文件夹，然后清理资源重新运行
 ```zsh
@@ -695,4 +694,11 @@ class GeneratorPage extends StatelessWidget {
 - `SafeArea`确保其子项不会被硬件凹口或者状态栏遮挡（比如 iPhone 的刘海）。用它来封装`NavigationRail`，能够防止导航按钮被遮挡
 - 如果将`NavigationRail`中的`extended`改为 true，你就能看到标签。我们后续学习允许应用在空间充足时自动调整这一点
 - `onDestinationSelected`有点类似`onPressed`，在选择目标页面时调用其中的操作
-- `Row`的第二个子项`Expanded`，用于这种布局：一些子项仅占用所需空间（NavigationRail），而其他子项尽可能多的占用剩余空间（Expanded）。如果你把 `NavigationRail`也用`Expanded`包裹起来，它看上去是这样：
+- `Row`的第二个子项`Expanded`，用于这种布局：一些子项仅占用所需空间（NavigationRail），而其他子项尽可能多的占用剩余空间（Expanded）。如果你把 `NavigationRail`也用`Expanded`包裹起来，而不是 `SafeArea`，它看上去是这样：![CleanShot 2025-10-23 at 02.28.55@2x.png](https://s2.loli.net/2025/10/23/TxwhVgKC9FLyBcp.png)
+- 因此`Expanded`是一个*贪婪*的组件。在其内部，我们有一个`Container`，为其指定了颜色和包裹的页面
+## 无状态 widget 和有状态 widget
+目前为止，我们写的都是 StatelessWidget，他们没有自己的状态，必须使用`MyAppState`。这样有局限性，虽然我们可以把所有页面的所有值都存在一个`state`中，但很快这个可维护性就很差了。如果你写过 React 或 Vue，将很快理解我在说什么。
+
+比如当前我们希望不同页面都具有自己的 state，比如 `selectedIndex`，页面的索引值以实现导航，就需要用到`StatefulWidget`
+
+将光标放在 `MyHomePage` 的第一行（以 `class MyHomePage...` 开头的行），然后使用 或 ⌘ +. 调出 Refactor 菜单。接下来，选择 Convert to StatefulWidget![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/238f98bceeb0de3a.gif?hl=zh-cn)
