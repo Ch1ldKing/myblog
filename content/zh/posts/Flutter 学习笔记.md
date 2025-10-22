@@ -691,3 +691,4 @@ class GeneratorPage extends StatelessWidget {
 
 // ...
 ```
+保存后，原有的功能正常，但侧边栏没有反应。与以前的代码比较，你可以发现原有的`HomePage `具有的组件都在 `GeneratorPage`中
