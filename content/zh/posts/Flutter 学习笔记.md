@@ -1,7 +1,7 @@
 ---
 title: Flutter 学习笔记
 date: 2025-10-01T16:22:33+08:00
-lastmod: 2025-10-01T16:22:33+08:00
+lastmod: 2025-10-23T16:22:33+08:00
 tags:
   - Flutter
 author: Dorianyang
@@ -463,3 +463,35 @@ class MyApp extends StatelessWidget {
 - 对于`Card()`同样适用，按下后可以看到一个`elevation`，修改它的值以扩大`Card`的阴影![CleanShot 2025-10-22 at 21.40.43.gif](https://s2.loli.net/2025/10/22/cm59RWbPVywaY3S.gif)
 
 # 添加喜欢功能
+首先，如果我们希望存储我们喜欢的单词，就要在状态中实现它
+```dart
+// ...
+
+class MyAppState extends ChangeNotifier {
+  var current = WordPair.random();
+
+  void getNext() {
+    current = WordPair.random();
+    notifyListeners();
+  }
+
+  // ↓ Add the code below.
+  var favorites = <WordPair>[];
+
+  void toggleFavorite() {
+    if (favorites.contains(current)) {
+      favorites.remove(current);
+    } else {
+      favorites.add(current);
+    }
+    notifyListeners();
+  }
+}
+
+// ...
+```
+注意所有的状态变化函数，结尾都要调用`notifyListeners()`，这样可以使那些 `context.watch<MyAppState>()`来获取这个函数对于 state 的更改
+
+然后来到我们的主界面，添加一个新按钮。这需要添加一个`Row`，如果你了解前端开发，这会很容易理解
+我们在 Column 中添加`mainAxisAlignment`,意在使其子项不是集中在顶部，而是纵向的中间。选中我们的 Button，然后 ⌘+.![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/7b9d0ea29e584308.gif?hl=zh-cn)
+然后
