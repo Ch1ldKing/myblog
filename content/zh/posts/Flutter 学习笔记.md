@@ -419,5 +419,5 @@ class MyApp extends StatelessWidget {
 
 // ...
 ```
-
+我们定义了一个新的 style，它是文字主题`textTheme`。这允许我们访问该文字主题中包含的各种的文字预设主题，比如`bodyMedium`（用于中等大小的标准文本）、`caption`（针对图片的说明）或`headlineLarge`
 
