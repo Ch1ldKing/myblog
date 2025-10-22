@@ -544,7 +544,7 @@ class MyAppState extends ChangeNotifier {
 保存后你应当能看到这个按钮了。然后再添加一个好看的图标。
 - 这个图标能够根据当前 WordPair 是否在 `favorites[]` 中来更改外观。
 -  此外，可以看到 ElevatedButton 支持一种 icon 方法，可以传入`icon`以显示
-- `Sizebox()`用于为 Column 添加间隔，也就是说，让两个纵向的东西之间有间隔（列之间的）
+- `Sizebox()`用于添加间隔。在 BigCard 和按钮所在行之间增加高度的间隔，在按钮和按钮之间增加宽度的间隔
 ```dart
 // ...
 
@@ -568,7 +568,7 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             BigCard(pair: pair),
-            SizedBox(height: 10),  //<-- and this.
+            SizedBox(height: 10),  
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -581,7 +581,7 @@ class MyHomePage extends StatelessWidget {
                   icon: Icon(icon),
                   label: Text('Like'),
                 ),
-                SizedBox(width: 10),
+                SizedBox(width: 10), //<-- and this.
 
                 ElevatedButton(
                   onPressed: () {
@@ -593,6 +593,97 @@ class MyHomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+// ...
+```
+
+# 添加侧边导航栏
+收藏了我们的 WordPair，但是再也找不回来了。这时候，我们需要再开一个页面，并提供一个路由（也就是导航栏）
+
+移除我们的`MyHomePage`，我们将将其拆分为两个 Widget，替换为以下代码
+```dart
+// ...
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: [
+          SafeArea(
+            child: NavigationRail(
+              extended: false,
+              destinations: [
+                NavigationRailDestination(
+                  icon: Icon(Icons.home),
+                  label: Text('Home'),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.favorite),
+                  label: Text('Favorites'),
+                ),
+              ],
+              selectedIndex: 0,
+              onDestinationSelected: (value) {
+                print('selected: $value');
+              },
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: Theme.of(context).colorScheme.primaryContainer,
+              child: GeneratorPage(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class GeneratorPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<MyAppState>();
+    var pair = appState.current;
+
+    IconData icon;
+    if (appState.favorites.contains(pair)) {
+      icon = Icons.favorite;
+    } else {
+      icon = Icons.favorite_border;
+    }
+
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          BigCard(pair: pair),
+          SizedBox(height: 10),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ElevatedButton.icon(
+                onPressed: () {
+                  appState.toggleFavorite();
+                },
+                icon: Icon(icon),
+                label: Text('Like'),
+              ),
+              SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: () {
+                  appState.getNext();
+                },
+                child: Text('Next'),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
