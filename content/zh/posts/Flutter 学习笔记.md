@@ -702,3 +702,4 @@ class GeneratorPage extends StatelessWidget {
 比如当前我们希望不同页面都具有自己的 state，比如 `selectedIndex`，页面的索引值以实现导航，就需要用到`StatefulWidget`
 
 将光标放在 `MyHomePage` 的第一行（以 `class MyHomePage...` 开头的行），然后使用 或 ⌘ +. 调出 Refactor 菜单。接下来，选择 Convert to StatefulWidget![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/238f98bceeb0de3a.gif?hl=zh-cn)
+IDE 为您创建了一个新类 `_MyHomePageState`。此类扩展 `State`，因此可以管理其自己的值。（它可以自行改变。）另请注意，旧版无状态 widget 中的 `build` 方法已移至 `_MyHomePageState`（而不是保留在 widget 中）。`build` 方法会一字不差的完成移动，其内部不会发生任何改变。该方法现在只是换了个位置。
