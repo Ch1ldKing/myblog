@@ -425,5 +425,14 @@ class MyApp extends StatelessWidget {
 
 但是我们需要对其进行自己的修改，这时候就要调用它的`copyWith()`，意在返回一个该样式的副本，但使用了我们自己的修改。此处我们修改了它的颜色，使用了`onPrimary`，字面意思就是"适合在主题色上展示的颜色"
 
-此外还有一个`!`值得注意。Dart 是一门 null 安全的语言，不允许调用空对象。但是使用`!`可以绕过这种检查，因为我们预知
+此外还有一个`!`值得注意。Dart 是一门 null 安全的语言，不允许调用空对象。但是使用`!`可以绕过这种检查。可能你会觉得多次依据，因为此处`displayMedium`一定有值。但假设：
+```dart
+final minimal = ThemeData(
+  // 不使用默认 Typography，自己给一个非常精简的 textTheme
+  textTheme: const TextTheme( // 只给了少数几个
+    bodyMedium: TextStyle(fontSize: 14),
+  ),
+);
+```
+可以看到 textTheme 中只有一个`bodyMedium`，而不是
 
