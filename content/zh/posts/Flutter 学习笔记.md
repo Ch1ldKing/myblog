@@ -692,5 +692,6 @@ class GeneratorPage extends StatelessWidget {
 // ...
 ```
 保存后，原有的功能正常，但侧边栏没有反应。与以前的代码比较，你可以发现原有的`HomePage `具有的组件都在 `GeneratorPage`中。在现在的`MyHomePage`中，一行有两个内容，第一个是 `SafeArea`，第二个是 `Expanded`，他们依然都是 Widget
-- `SafeArea`确保其子项不会被硬件凹口或者状态栏遮挡（比如 iPhone 的刘海）
-- 
+- `SafeArea`确保其子项不会被硬件凹口或者状态栏遮挡（比如 iPhone 的刘海）。用它来封装`NavigationRail`，能够防止导航按钮被遮挡
+- 如果将`NavigationRail`中的`extended`改为 true，你就能看到标签。我们后续学习允许应用在空间充足时自动调整这一点
+- `onDestinationSelected`有点类似`onPressed`，在选择目标页面时
