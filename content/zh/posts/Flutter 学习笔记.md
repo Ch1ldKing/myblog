@@ -425,6 +425,8 @@ class MyApp extends StatelessWidget {
 
 但是我们需要对其进行自己的修改，这时候就要调用它的`copyWith()`，意在返回一个该样式的副本，但使用了我们自己的修改。此处我们修改了它的颜色，使用了`onPrimary`，字面意思就是"适合在主题色上展示的颜色"
 
+因此，现在文字会显得很突出![CleanShot 2025-10-22 at 21.35.11@2x.png](https://s2.loli.net/2025/10/22/JmNdQoUki72qFSy.png)
+
 此外还有一个`!`值得注意。Dart 是一门 null 安全的语言，不允许调用空对象。但是使用`!`可以绕过这种检查。可能你会觉得多次依据，因为此处`displayMedium`一定有值。但假设：
 ```dart
 final minimal = ThemeData(
@@ -434,5 +436,27 @@ final minimal = ThemeData(
   ),
 );
 ```
-可以看到 textTheme 中只有一个`bodyMedium`，而不是
+可以看到`minimal`主题的`textTheme` 中只有一个`bodyMedium`，而不是我们现在用的常见`Material3`主题：
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'Namer App',
+        theme: ThemeData(
+          useMaterial3: true,    // <-- 这里提到了现在的主题
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
+        ),
+        home: MyHomePage(),
+      ),
+    );
+  }
+}
+```
+
+### 进一步自定义文本主题
+将鼠标放在`copyWith()`上，按下 ⌘+⇧+Space，可以看到可以更改的属性列表
