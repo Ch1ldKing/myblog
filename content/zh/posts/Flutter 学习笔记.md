@@ -493,5 +493,5 @@ class MyAppState extends ChangeNotifier {
 注意所有的状态变化函数，结尾都要调用`notifyListeners()`，这样可以使那些 `context.watch<MyAppState>()`来获取这个函数对于 state 的更改
 
 然后来到我们的主界面，添加一个新按钮。这需要添加一个`Row`，如果你了解前端开发，这会很容易理解
-我们在 Column 中添加`mainAxisAlignment`,意在使其子项不是集中在顶部，而是纵向的中间。选中我们的 Button，然后 ⌘+.![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/7b9d0ea29e584308.gif?hl=zh-cn)
+我们在 Column 中添加`mainAxisAlignment`,意在使其子项不是集中在顶部，而是纵向的中间（毕竟 column 是列，列是纵向的）。选中我们的 Button，然后 ⌘+.，选择 Wrap with Row![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/7b9d0ea29e584308.gif?hl=zh-cn)
 然后
