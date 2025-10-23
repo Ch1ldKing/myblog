@@ -856,3 +856,53 @@ Flutter 提供了很多具有这种能力的 widget，例如：
 再次保存，查看一下结果![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/6223bd3e2dc157eb.gif?hl=zh-cn)
 # 添加一个新页面
 我们复习一下我们学过的内容即可，我推荐你自己动手做一个。以下是我的代码
+记得替换`index`对应的`PlaceHolder()`
+```dart
+class FavoritesPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<MyAppState>();
+    var favorites = appState.favorites;
+    return ListView(
+      children: [
+        for (WordPair fav in favorites) ...[
+          ListCard(fav: fav),
+          SizedBox(height: 5),
+        ],
+      ],
+    );
+  }
+}
+
+class ListCard extends StatelessWidget {
+  const ListCard({
+    super.key,
+    required this.fav,
+  });
+
+  final WordPair fav;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final style = theme.textTheme.displayMedium!.copyWith(
+      color: theme.colorScheme.onPrimary,
+    );
+    return Card(
+      color: theme.colorScheme.primary,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Icon(Icons.favorite, color: theme.colorScheme.onPrimary),
+            SizedBox(width: 10),
+            Text(fav.asLowerCase, style: style),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
