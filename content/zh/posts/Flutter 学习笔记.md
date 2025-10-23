@@ -763,6 +763,7 @@ class _MyHomePageState extends State<MyHomePage> {
 > 你可能会好奇为什么组件知道我们的 0,1 代表着页面的索引。实际上这是 Flutter 的 API 规定好的。对于`NavigationRail`这个组件，`onDestinationSelected`就是接收一个 int 参数，并用于 destinations 切换
 
 ## 使用 state 中的 index
+### 建立 `selectedIndex` 和 不同 `page` 的关联
 我们首先要建立 `selectedIndex` 和 不同 `page` 的关联。在`_MyHomePageState` 的 `build` 方法的顶部：
 ```dart
 // ...
@@ -790,3 +791,5 @@ Widget build(BuildContext context) {
 ![5685cf886047f6ec.png](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/5685cf886047f6ec.png?hl=zh-cn)
 
 4. 通过应用[快速失败原则](https://en.wikipedia.org/wiki/Fail-fast)，switch 语句还将确保在 `selectedIndex` 既不是 0 也不是 1 的情况下抛出错误。这有助于防止后续 bug。如果您向侧边导航栏添加了一个新的目标页面而忘记更新此代码，则程序会在开发过程中崩溃（而不是让您猜测程序为何无法正常运行，或者让您将有缺陷的代码发布到生产环境中）
+### 使右侧容器显示页面
+我们在前文提到了`Expanded`组件
