@@ -691,9 +691,11 @@ class GeneratorPage extends StatelessWidget {
 // ...
 ```
 保存后，原有的功能正常，但侧边栏没有反应。与以前的代码比较，你可以发现原有的`HomePage `具有的组件都在 `GeneratorPage`中。在现在的`MyHomePage`中，一行有两个内容，第一个是 `SafeArea`，第二个是 `Expanded`，他们依然都是 Widget
+## SafeArea及其导航
 - `SafeArea`确保其子项不会被硬件凹口或者状态栏遮挡（比如 iPhone 的刘海）。用它来封装`NavigationRail`，能够防止导航按钮被遮挡
 - 如果将`NavigationRail`中的`extended`改为 true，你就能看到标签。我们后续学习允许应用在空间充足时自动调整这一点
 - `onDestinationSelected`有点类似`onPressed`，在选择目标页面时调用其中的操作
+## Expanded及其容器
 - `Row`的第二个子项`Expanded`，用于这种布局：一些子项仅占用所需空间（NavigationRail），而其他子项尽可能多的占用剩余空间（Expanded）。如果你把 `NavigationRail`也用`Expanded`包裹起来，而不是 `SafeArea`，它看上去是这样：![CleanShot 2025-10-23 at 02.28.55@2x.png](https://s2.loli.net/2025/10/23/TxwhVgKC9FLyBcp.png)
 - 因此`Expanded`是一个*贪婪*的组件。在其内部，我们有一个`Container`，为其指定了颜色和包裹的页面
 ## 无状态 widget 和有状态 widget
@@ -792,4 +794,64 @@ Widget build(BuildContext context) {
 
 4. 通过应用[快速失败原则](https://en.wikipedia.org/wiki/Fail-fast)，switch 语句还将确保在 `selectedIndex` 既不是 0 也不是 1 的情况下抛出错误。这有助于防止后续 bug。如果您向侧边导航栏添加了一个新的目标页面而忘记更新此代码，则程序会在开发过程中崩溃（而不是让您猜测程序为何无法正常运行，或者让您将有缺陷的代码发布到生产环境中）
 ### 使右侧容器显示页面
-我们在前文提到了`Expanded`组件
+我们在前文提到了[Expanded](##Expanded及其容器)组件，在我们的 app 中，它其中的 `Container` 是右侧的主区域。因此我们为`Container`增加子组件 page
+```dart
+// ...
+          Expanded(
+            child: Container(
+              color: Theme.of(context).colorScheme.primaryContainer,
+              child: page,  // ← Here.
+            ),
+          ),
+// ...
+```
+现在应用更改，你就能看到变化![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/4122ee1c4830e0eb.gif?hl=zh-cn)
+# 为侧边导航自适应
+这也是我们前文提到的[功能](##SafeArea及其导航)。`NavigationRail`具有`extended`值，它会让侧边栏显示标签，但我们希望空间较小时，它能自动隐藏
+
+Flutter 提供了很多具有这种能力的 widget，例如：
+- `Wrap`类似于 Row 或 Column，垂直或水平空间不足时，它将自动将项目放至下一列/行
+- `Fittedbox`可根据规格将子项放至可用空间（不限制列/行）
+- `LayoutBuilder`可以根据可用空间大小来修改 widget 树
+
+不过值得注意的是，程序并不知道可用空间的大小。我们需要自己定义足够的空间的像素
+
+>假设我规定仅当 `MyHomePage` 的宽度至少为 600 像素时才显示标签（flutter 中的像素是逻辑像素，即视觉上的像素，这与不同的屏幕种类无关。通常每厘米有 38 个逻辑像素，即使你用 oled 有很多物理像素，它就是视觉上的 38 个）
+
+我们使用 `LayoutBuilder`，使用 ⌘+. 进行包裹
+1. 在 `_MyHomePageState` 的 `build` 方法内部，将光标放在 `Scaffold` 上。
+2. 使用 `Ctrl+.` 键 (Windows/Linux) 或 `Cmd+.` 键 (Mac) 调出 Refactor 菜单。
+3. 选择 Wrap with Builder 并按下 Enter 键。
+4. 将新添加的 `Builder` 的名称修改为 `LayoutBuilder`。
+5. 将回调参数列表从 `(context)` 修改为 `(context, constraints)`。
+![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/52d18742c54f1022.gif?hl=zh-cn)
+每当约束发生更改时，系统都会调用 `LayoutBuilder` 的 `builder` 回调。比如说，以下场景就会触发这种情况：
+- 用户调整应用窗口的大小
+- 用户将手机从人像模式旋转到横屏模式，或从横屏模式旋转到人像模式
+- `MyHomePage` 旁边的一些 widget 变大，使 `MyHomePage` 的约束变小
+- 其他还有很多，不再一一列举
+
+我们可以通过监控当前的 `constraints` 来决定是否显示标签。对 `_MyHomePageState` 的 `build` 方法进行以下单行更改：
+```dart
+// ...
+    return LayoutBuilder(builder: (context, constraints) {
+      return Scaffold(
+        body: Row(
+          children: [
+            SafeArea(
+              child: NavigationRail(
+                extended: constraints.maxWidth >= 600,  // ← Here.
+                destinations: [
+                  NavigationRailDestination(
+                    icon: Icon(Icons.home),
+                    label: Text('Home'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.favorite),
+                    label: Text('Favorites'),
+                  ),
+                ],
+// ...
+```
+再次保存，查看一下结果![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/6223bd3e2dc157eb.gif?hl=zh-cn)
+# 添加一个新页面
