@@ -697,9 +697,10 @@ class GeneratorPage extends StatelessWidget {
 - `Row`的第二个子项`Expanded`，用于这种布局：一些子项仅占用所需空间（NavigationRail），而其他子项尽可能多的占用剩余空间（Expanded）。如果你把 `NavigationRail`也用`Expanded`包裹起来，而不是 `SafeArea`，它看上去是这样：![CleanShot 2025-10-23 at 02.28.55@2x.png](https://s2.loli.net/2025/10/23/TxwhVgKC9FLyBcp.png)
 - 因此`Expanded`是一个*贪婪*的组件。在其内部，我们有一个`Container`，为其指定了颜色和包裹的页面
 ## 无状态 widget 和有状态 widget
-目前为止，我们写的都是 StatelessWidget，他们没有自己的状态，必须使用`MyAppState`。这样有局限性，虽然我们可以把所有页面的所有值都存在一个`state`中，但很快这个可维护性就很差了。如果你写过 React 或 Vue，将很快理解我在说什么。
+目前为止，我们写的都是 StatelessWidget，他们没有自己的状态，必须使用`MyAppState`。这样有局限性，虽然我们可以把所有页面的所有值都存在一个`state`中，但很快这个可维护性就很差了。如果你写过 React 或 Vue，将很快理解我在说什么，这是一种组件化的设计思想
 
 比如当前我们希望不同页面都具有自己的 state，比如 `selectedIndex`，页面的索引值以实现导航，就需要用到`StatefulWidget`
 
 将光标放在 `MyHomePage` 的第一行（以 `class MyHomePage...` 开头的行），然后使用 或 ⌘ +. 调出 Refactor 菜单。接下来，选择 Convert to StatefulWidget![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/238f98bceeb0de3a.gif?hl=zh-cn)
-IDE 为您创建了一个新类 `_MyHomePageState`。此类扩展 `State`，因此可以管理其自己的值。（它可以自行改变。）另请注意，旧版无状态 widget 中的 `build` 方法已移至 `_MyHomePageState`（而不是保留在 widget 中）。`build` 方法会一字不差的完成移动，其内部不会发生任何改变。该方法现在只是换了个位置。
+IDE 为您创建了一个新类 `_MyHomePageState`。此类基于 `State<MyHomePage>`实现，是一个独立的类，有自己的值。另请注意，旧版无状态 widget 中的 `build` 方法已移至 `_MyHomePageState`（而不是保留在 widget 中）。`build` 方法会一字不差的完成移动，其内部不会发生任何改变。该方法现在只是换了个位置。
+
