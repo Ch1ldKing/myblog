@@ -704,3 +704,57 @@ class GeneratorPage extends StatelessWidget {
 将光标放在 `MyHomePage` 的第一行（以 `class MyHomePage...` 开头的行），然后使用 或 ⌘ +. 调出 Refactor 菜单。接下来，选择 Convert to StatefulWidget![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/238f98bceeb0de3a.gif?hl=zh-cn)
 IDE 为您创建了一个新类 `_MyHomePageState`。此类基于 `State<MyHomePage>`实现，是一个独立的类，有自己的值。另请注意，旧版无状态 widget 中的 `build` 方法已移至 `_MyHomePageState`（而不是保留在 widget 中）。`build` 方法会一字不差的完成移动，其内部不会发生任何改变。该方法现在只是换了个位置。
 
+> -MyHomePageState 开始的下划线将该类设置为私有类，也就是不能被其他类之外的部分引用
+
+## 为 Widget 设置 state
+当前，我们的 Widget 只需要管理一个值，就是`selectedIndex`，也就是当前选中的页面的索引。这样做的原因是现在的`HomePage`实际上并不是一个 Page，它是对于所有页面的一个集合，并通过导航实现页面间的切换。因此，使`selectedIndex`成为它管理范围的一个值再好不过了
+```dart
+// ...
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  var selectedIndex = 0;     // ← Add this property.
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: [
+          SafeArea(
+            child: NavigationRail(
+              extended: false,
+              destinations: [
+                NavigationRailDestination(
+                  icon: Icon(Icons.home),
+                  label: Text('Home'),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.favorite),
+                  label: Text('Favorites'),
+                ),
+              ],
+              selectedIndex: selectedIndex,    // ← Change to this.
+              onDestinationSelected: (value) {
+
+                // ↓ Replace print with this.
+                setState(() {
+                  selectedIndex = value;
+                });
+
+              },
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: Theme.of(context).colorScheme.primaryContainer,
+              child: GeneratorPage(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ...
+```
