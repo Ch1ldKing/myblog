@@ -1,6 +1,6 @@
 ---
 title: Flutter 学习笔记
-date: 2025-10-01T16:22:33+08:00
+date: 2025-10-23T16:22:33+08:00
 lastmod: 2025-10-23T16:22:33+08:00
 tags:
   - Flutter
@@ -906,3 +906,4 @@ class ListCard extends StatelessWidget {
 }
 
 ```
+![CleanShot 2025-10-23 at 16.06.54@2x.png](https://s2.loli.net/2025/10/23/2lafKd8Cbc9APhv.png)
