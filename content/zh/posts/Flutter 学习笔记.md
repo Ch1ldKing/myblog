@@ -855,3 +855,4 @@ Flutter 提供了很多具有这种能力的 widget，例如：
 ```
 再次保存，查看一下结果![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/6223bd3e2dc157eb.gif?hl=zh-cn)
 # 添加一个新页面
+我们复习一下我们学过的内容即可，我推荐你自己动手做一个。以下是我的代码
