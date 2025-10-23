@@ -759,4 +759,34 @@ class _MyHomePageState extends State<MyHomePage> {
 // ...
 ```
 
-现在点击切换，我们就会保存选中的值了
+现在点击切换，我们就会保存选中的值了。保存查看点击的效果![](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/2b31dd91c5ba6766.gif?hl=zh-cn)
+> 你可能会好奇为什么组件知道我们的 0,1 代表着页面的索引。实际上这是 Flutter 的 API 规定好的。对于`NavigationRail`这个组件，`onDestinationSelected`就是接收一个 int 参数，并用于 destinations 切换
+
+## 使用 state 中的 index
+我们首先要建立 `selectedIndex` 和 不同 `page` 的关联。在`_MyHomePageState` 的 `build` 方法的顶部：
+```dart
+// ...
+@override
+Widget build(BuildContext context) {
+
+	Widget page;
+	switch (selectedIndex) {
+	  case 0:
+	    page = GeneratorPage();
+	    break;
+	  case 1:
+	    page = Placeholder();
+	    break;
+	  default:
+	    throw UnimplementedError('no widget for $selectedIndex');
+	}
+
+// ...
+```
+1. 这段代码声明了一个类型为 `Widget` 的新变量 `page`。
+2. 然后，根据 `selectedIndex` 中的当前值，switch 语句为 `page` 分配一个屏幕。
+3. 目前还没有 `FavoritesPage`，因此先使用 `Placeholder`；这是一个便捷易用的 widget，可以在其放置地方绘制一个交叉矩形，以便将界面的该部分标记为未完成。
+
+![5685cf886047f6ec.png](https://codelabs.developers.google.cn/static/codelabs/flutter-codelab-first/img/5685cf886047f6ec.png?hl=zh-cn)
+
+4. 通过应用[快速失败原则](https://en.wikipedia.org/wiki/Fail-fast)，switch 语句还将确保在 `selectedIndex` 既不是 0 也不是 1 的情况下抛出错误。这有助于防止后续 bug。如果您向侧边导航栏添加了一个新的目标页面而忘记更新此代码，则程序会在开发过程中崩溃（而不是让您猜测程序为何无法正常运行，或者让您将有缺陷的代码发布到生产环境中）
