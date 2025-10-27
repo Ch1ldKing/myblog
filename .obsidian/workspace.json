@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/Flutter 学习笔记.md",
+                "file": "content/zh/resume.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Flutter 学习笔记"
+              "title": "resume"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/Flutter 学习笔记.md",
+                "file": "content/zh/posts/搭建一个 Vite + React 项目.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Flutter 学习笔记"
+              "title": "搭建一个 Vite + React 项目"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/posts/Flutter 学习笔记.md",
+                "file": "content/zh/resume.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Flutter 学习笔记"
+              "title": "Backlinks for resume"
             }
           },
           {
@@ -210,11 +210,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a29f9c895b4bd682",
+  "active": "33e658bca2ae02b6",
   "lastOpenFiles": [
+    "content/zh/posts/Flutter 学习笔记.md",
+    "content/zh/posts/搭建一个 Vite + React 项目.md",
     "content/zh/posts/纯小白怎么装 Python 环境.md",
     "content/zh/posts/Untitled.md",
-    "content/zh/posts/Flutter 学习笔记.md",
     "content/zh/posts/XXX 已损坏，你应该拖到废纸篓中.md",
     "content/zh/about.md",
     "content/zh/archives.md",
@@ -223,7 +224,6 @@
     "content/zh/posts/Maple-Theme 配合 Maple-font.md",
     "content/zh/posts/iSelect-React 开发日志.md",
     "content/zh/posts/iSelect-分布式机器学习计算系统半场香槟总结.md",
-    "content/zh/posts/搭建一个 Vite + React 项目.md",
     "content/zh/posts/哈工大云原生实验总结.md",
     "content/zh/posts/React 遇到的一些知识.md",
     "content/en/resume.md",
