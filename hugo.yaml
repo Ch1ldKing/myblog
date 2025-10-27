@@ -96,8 +96,8 @@ languages:
           url: https://github.com/Ch1ldKing
         - name: telegram
           url: https://t.me/ch1ldk1ng
-        # - name: email
-        #   url: 'mailto:childking0909@gmail.com'
+        - name: email
+          url: 'mailto:childking0909@gmail.com'
       comments: true
       label:
         text: Ch1ldKing
