@@ -62,4 +62,8 @@ $ mlx_lm.lora --model <此处你的基座模型路径> --train --data ./data
 # Calculating loss...: 100%|██| 25/25 [00:07<00:00,  3.42it/s]
 ```
 2. 微调结束后，可以看到如下内容，是 checkpoints 和最终模型![](https://s2.loli.net/2025/10/29/Uar8DLKH2n7yJ4Z.png)
-3. 
+3. 然后我们进行融合权重
+```zsh
+$ mlx_lm.fuse --model <你的基座模型路径>  --adapter-path adapters --save-path minicausal
+```
+4. 最终
