@@ -48,7 +48,7 @@ $ conda create -n mlx python==3.13
 ```zsh
 $ uv add mlx-lm transformers torch numpy
 ```
-# 运行过程
+# 微调过程
  1. 进入项目路径 `cd /mlx_example/lora/`
 ```zsh
 $ mlx_lm.lora --model <此处你的基座模型路径> --train --data ./data
@@ -64,6 +64,13 @@ $ mlx_lm.lora --model <此处你的基座模型路径> --train --data ./data
 2. 微调结束后，可以看到如下内容，是 checkpoints 和最终模型![](https://s2.loli.net/2025/10/29/Uar8DLKH2n7yJ4Z.png)
 3. 然后我们进行融合权重
 ```zsh
-$ mlx_lm.fuse --model <你的基座模型路径>  --adapter-path adapters --save-path minicausal
+$ mlx_lm.fuse --model <你的基座模型路径>  --adapter-path adapters --save-path <你的模型名字>
 ```
-4. 最终
+4. 最终得到以下文件
+   ![CleanShot 2025-10-29 at 00.58.34@2x.png](https://s2.loli.net/2025/10/29/5EnOx71WZsXofmz.png)
+# 模型部署
+1. 下载 Ollama（麻烦自行查找并下载）
+2. 新建一个`Modelfile`，注意没有后缀
+```zsh
+
+```
