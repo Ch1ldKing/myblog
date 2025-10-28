@@ -70,7 +70,27 @@ $ mlx_lm.fuse --model <你的基座模型路径>  --adapter-path adapters --save
    ![CleanShot 2025-10-29 at 00.58.34@2x.png](https://s2.loli.net/2025/10/29/5EnOx71WZsXofmz.png)
 # 模型部署
 1. 下载 Ollama（麻烦自行查找并下载）
-2. 新建一个`Modelfile`，注意没有后缀
+2. 新建一个`Modelfile`，注意没有后缀，内容如下（也可以参考[此网站](https://www.llamafactory.cn/ollama-docs/modelfile.html)）
 ```zsh
+FROM <模型文件夹的绝对路径>
 
+# 推理参数（适合精确结构推理）
+PARAMETER temperature 0.2
+PARAMETER top_p 0.8
+PARAMETER top_k 50
+PARAMETER repeat_penalty 1.05
+PARAMETER num_ctx 4096
+PARAMETER num_predict 512
+
+# 对齐 Qwen 格式的多轮对话模版
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+
+# 设定系统指令
+SYSTEM "You are an expert in causal inference and graph theory."
 ```
+3. 
