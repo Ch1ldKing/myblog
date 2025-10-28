@@ -93,4 +93,7 @@ TEMPLATE """<|im_start|>system
 # 设定系统指令
 SYSTEM "You are an expert in causal inference and graph theory."
 ```
-3. 
+3. 利用 ollama 创建
+```zsh
+$ ollama create <模型名字> -f <Modelfile位置>'
+```
