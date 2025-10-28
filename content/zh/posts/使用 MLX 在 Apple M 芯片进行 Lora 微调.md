@@ -3,7 +3,9 @@ title: 使用 MLX 在 Apple M 芯片进行 Lora 微调
 date: 2025-10-28T22:22:36+08:00
 lastmod: 2025-10-28T22:22:36+08:00
 tags:
-  - problem
+  - mlx
+  - lora
+  - llm
 author: Dorianyang
 draft: false
 showToc: true
@@ -21,6 +23,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
+苹果加油，和 CUDA 碰一碰
 # 数据准备
 1. 从 github 克隆 Apple 给出的示例项目项目
    `git clone https://github.com/ml-explore/mlx-examples.git`
@@ -32,7 +35,7 @@ modelscope download --model gongjy/MiniMind2
 ```
 4. 下载后，记住模型的路径。此处我的路径如下![CleanShot 2025-10-29 at 00.18.56@2x.png](https://s2.loli.net/2025/10/29/AMzUcXeZ1dSrPIG.png)
 # 环境配置
-1. 使用 uv 初始化一个环境。
+1. 使用 uv 初始化一个环境
 ```zsh
 $ uv init --name mlx . -p3.13 
 Initialized project `hypollm` at `/Users/dorian/Documents/Programme/NUS311/model_test`
@@ -41,17 +44,22 @@ Initialized project `hypollm` at `/Users/dorian/Documents/Programme/NUS311/model
 ```zsh
 $ conda create -n mlx python==3.13
 ```
-3. 
+3. 安装所需的包
 ```zsh
-$ uv add mlx-lm, transformers, torch, numpy
+$ uv add mlx-lm transformers torch numpy
 ```
+# 运行过程
+ 1. 进入项目路径 `cd /mlx_example/lora/`
+```zsh
+$ mlx_lm.lora --model <此处你的基座模型路径> --train --data ./data
 
-```zsh
-$ mlx_lm.lora --model /Users/dorian/.cache/modelscope/hub/models/gongjy/MiniMind2 --train --data ./data
-Loading pretrained model
-Loading datasets
-Training
-Trainable parameters: 1.654% (1.720M/104.031M)
-Starting training..., iters: 1000
-Calculating loss...: 100%|██| 25/25 [00:07<00:00,  3.42it/s]
+# 显示如下则成功
+# Loading pretrained model
+# Loading datasets
+# Training
+# Trainable parameters: 1.654% (1.720M/104.031M)
+# Starting training..., iters: 1000
+# Calculating loss...: 100%|██| 25/25 [00:07<00:00,  3.42it/s]
 ```
+2. 微调结束后，可以看到如下内容，是 checkpoints 和最终模型![](https://s2.loli.net/2025/10/29/Uar8DLKH2n7yJ4Z.png)
+3. 

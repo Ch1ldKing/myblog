@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/zh/posts/2025-10-28_22-22-36.md",
+                "file": "content/zh/posts/使用 MLX 在 Apple M 芯片进行 Lora 微调.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-28_22-22-36"
+              "title": "使用 MLX 在 Apple M 芯片进行 Lora 微调"
             }
           },
           {
@@ -107,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 278.5,
+    "collapsed": true
   },
   "right": {
     "id": "ee15ea2b455a2d88",
@@ -123,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/posts/2025-10-28_22-22-36.md",
+                "file": "content/zh/posts/使用 MLX 在 Apple M 芯片进行 Lora 微调.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-10-28_22-22-36"
+              "title": "Backlinks for 使用 MLX 在 Apple M 芯片进行 Lora 微调"
             }
           },
           {
@@ -211,8 +212,8 @@
   },
   "active": "33e658bca2ae02b6",
   "lastOpenFiles": [
-    "content/zh/posts/2025-10-28_11-55-21.md",
-    "content/zh/posts/2025-10-28_22-22-36.md",
+    "content/zh/posts/模型训练踩坑合集.md",
+    "content/zh/posts/使用 MLX 在 Apple M 芯片进行 Lora 微调.md",
     "content/zh/resume.md",
     "content/zh/posts/Flutter 学习笔记.md",
     "content/zh/posts/搭建一个 Vite + React 项目.md",
