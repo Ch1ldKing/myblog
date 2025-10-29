@@ -49,9 +49,9 @@ $ conda create -n mlx python==3.13
 $ uv add mlx-lm transformers torch numpy
 ```
 # 微调过程
- 1. 进入项目路径 `cd /mlx_example/lora/`
+ 1. 进入项目路径 `cd /mlx_example/lora/`。如果不使用 swanlab 就删除最后一个 arg
 ```zsh
-$ mlx_lm.lora --model <此处你的基座模型路径> --train --data ./data
+$ mlx_lm.lora --model <此处你的基座模型路径> --train --data ./data --report-to swanlab
 
 # 显示如下则成功
 # Loading pretrained model
