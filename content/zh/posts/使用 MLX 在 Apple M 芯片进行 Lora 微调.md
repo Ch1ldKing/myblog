@@ -101,3 +101,5 @@ $ ollama create <模型名字> -f <Modelfile位置>
 ```zsh
 $ ollama run <模型名字>
 ```
+
+这篇博客也很好 https://juejin.cn/post/7426343844595335168
