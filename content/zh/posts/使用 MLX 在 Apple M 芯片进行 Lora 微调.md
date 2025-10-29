@@ -95,5 +95,9 @@ SYSTEM "You are an expert in causal inference and graph theory."
 ```
 3. 利用 ollama 创建
 ```zsh
-$ ollama create <模型名字> -f <Modelfile位置>'
+$ ollama create <模型名字> -f <Modelfile位置>
+```
+4. 运行
+```zsh
+$ ollama run <模型名字>
 ```
